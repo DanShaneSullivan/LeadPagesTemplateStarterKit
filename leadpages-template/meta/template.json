@@ -2,9 +2,9 @@
     "id": "LP-TSK-01",
     "name": "LeadPages Template Starter Kit",
     "mobile": true,
-    "notes": "Fixed LeadBoxes texts",
+    "notes": "Updated with Syntax 4.0",
     "syntax": 4,
-    "version": 1.052,
+    "version": 1.0,
     "style": {
         "replacements": [
             {
@@ -84,6 +84,11 @@
             "variable": "facebookurl",
             "dafault": "",
             "name": "The URL to share on Facebook. Leave blank to share the current page."
+        },
+        "videourl": {
+            "variable": "videourl",
+            "default": "//www.youtube.com/embed/YZKFFX4hVps?rel=0&amp;controls=0&amp;loop=1&amp;showinfo=0&amp;autoplay=1&amp;playlist=dhzI3Om9QIQ",
+            "name": "The url of the video. Append these for options: ?rel=0&amp;controls=0&amp;loop=1&amp;showinfo=0&amp;autoplay=1&amp;"
         }
     },
     "elements": [
@@ -916,6 +921,11 @@
             "name": "Example #15"
         },
         {
+            "id": "ex16",
+            "type": "container",
+            "name": "Example #16"
+        },
+        {
             "id": "ex01-h3",
             "type": "text",
             "name": "Sub-head"
@@ -987,6 +997,11 @@
         },
         {
             "id": "ex15-h3",
+            "type": "text",
+            "name": "Sub-head"
+        },
+        {
+            "id": "ex16-h3",
             "type": "text",
             "name": "Sub-head"
         },
@@ -1066,6 +1081,11 @@
             "name": "Column #1"
         },
         {
+            "id": "ex16-col01",
+            "type": "container",
+            "name": "Column #1"
+        },
+        {
             "id": "ex01-col02",
             "type": "container",
             "name": "Column #2"
@@ -1137,6 +1157,11 @@
         },
         {
             "id": "ex15-col02",
+            "type": "container",
+            "name": "Column #2"
+        },
+        {
+            "id": "ex16-col02",
             "type": "container",
             "name": "Column #2"
         },
@@ -1216,6 +1241,11 @@
             "name": "Panel #1"
         },
         {
+            "id": "ex16-panel01",
+            "type": "container",
+            "name": "Panel #1"
+        },
+        {
             "id": "ex01-panel02",
             "type": "container",
             "name": "Panel #2"
@@ -1291,7 +1321,17 @@
             "name": "Panel #2"
         },
         {
+            "id": "ex16-panel02",
+            "type": "container",
+            "name": "Panel #2"
+        },
+        {
             "id": "ex08-panel03",
+            "type": "container",
+            "name": "Panel #3"
+        },
+        {
+            "id": "ex16-panel03",
             "type": "container",
             "name": "Panel #3"
         },
@@ -1371,6 +1411,11 @@
             "name": "Header"
         },
         {
+            "id": "ex16-panel01-head",
+            "type": "text",
+            "name": "Header"
+        },
+        {
             "id": "ex01-panel02-head",
             "type": "text",
             "name": "Header"
@@ -1446,7 +1491,17 @@
             "name": "Header"
         },
         {
+            "id": "ex16-panel02-head",
+            "type": "text",
+            "name": "Header"
+        },
+        {
             "id": "ex08-panel03-head",
+            "type": "text",
+            "name": "Header"
+        },
+        {
+            "id": "ex16-panel03-head",
             "type": "text",
             "name": "Header"
         },
@@ -1531,6 +1586,11 @@
             "name": "Body"
         },
         {
+            "id": "ex16-panel01-body01",
+            "type": "container",
+            "name": "Body"
+        },
+        {
             "id": "ex01-panel02-body",
             "type": "container",
             "name": "Body"
@@ -1611,7 +1671,17 @@
             "name": "Body"
         },
         {
+            "id": "ex16-panel02-body01",
+            "type": "container",
+            "name": "Body"
+        },
+        {
             "id": "ex08-panel03-body",
+            "type": "container",
+            "name": "Body"
+        },
+        {
+            "id": "ex16-panel03-body",
             "type": "container",
             "name": "Body"
         },
@@ -1682,6 +1752,11 @@
         },
         {
             "id": "ex15-lead",
+            "type": "text",
+            "name": "Lead"
+        },
+        {
+            "id": "ex16-lead",
             "type": "text",
             "name": "Lead"
         },
@@ -1761,6 +1836,11 @@
             "name": "Pre-formatted Text"
         },
         {
+            "id": "ex16-pre01",
+            "type": "text",
+            "name": "Pre-formatted Text"
+        },
+        {
             "id": "ex01-pre02",
             "type": "text",
             "name": "Pre-formatted Text"
@@ -1836,6 +1916,11 @@
             "name": "Pre-formatted Text"
         },
         {
+            "id": "ex16-pre02",
+            "type": "text",
+            "name": "Pre-formatted Text"
+        },
+        {
             "id": "ex08-pre03",
             "type": "text",
             "name": "Pre-formatted Text"
@@ -1847,6 +1932,16 @@
         },
         {
             "id": "ex15-pre04",
+            "type": "text",
+            "name": "Pre-formatted Text"
+        },
+        {
+            "id": "ex16-pre03",
+            "type": "text",
+            "name": "Pre-formatted Text"
+        },
+        {
+            "id": "ex16-pre04",
             "type": "text",
             "name": "Pre-formatted Text"
         },
@@ -1954,6 +2049,16 @@
             "data": {
                 "max-width": 240,
                 "href": "#/optin"
+            }
+        },
+        {
+            "type": "dynamic",
+            "id": "ex16-dynamic",
+            "name": "Video Background Example",
+            "data": {
+                "variables": [
+                    "videourl"
+                ]
             }
         }
     ]
