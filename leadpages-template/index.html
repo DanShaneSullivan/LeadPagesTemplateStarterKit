@@ -44,10 +44,14 @@
             <p class="lead" id="s01-lead">The file and folder structure of a LeadPages&trade; template is relatively simple. There are a few gotchas and best-practices worth noting but fundamentally a template is comprised of HTML, CSS, Javascript, and some media assets. Skip to the <a href="#s06">About</a> section to skip right to a sample template.</p>
 
             <h3 id="s01-h3-01">Template File and Folder Structure</h3>
-            <pre id="s01-pre">
+            <pre data-lead-id="s01-pre">
 leadpages-template/
 |--- css/
 |    |---- style.css
+|--- fonts
+|    |---- font.eof
+|    |---- font.woff
+|    |---- font.ttf
 |--- img/
 |    |---- image1.jpg
 |    |---- image2.png
@@ -59,7 +63,6 @@ leadpages-template/
 |    |---- html5shiv.js
 |    |---- jquery-1.9.1.min.js
 |--- meta/
-|    |---- form.html
 |    |---- template.json</pre>
 
             <h3 id="s01-h3-02">Recommendations &amp; Notes About Files and Folders</h3>
@@ -89,7 +92,7 @@ leadpages-template/
             </p>
 
             <h3 id="s02-h3-01">"meta/template.json" Example</h3>
-            <pre id="s02-pre">
+            <pre data-lead-id="s02-pre">
 {
     "id": "HELLO-01",
     "name": "Hello world",
@@ -97,6 +100,25 @@ leadpages-template/
     "notes": "Initial import; first pass.",
     "syntax": 4,
     "version": 1.00,
+    "form": {
+        "title": {
+              "css": {
+              },
+              "html": "&lt;h2&gt;Valid html header text goes here&lt;/h2&gt;"
+          },
+          "submit": {
+              "css": {
+                  "valid-css-properties": "valid-css-values-goes-here"
+              },
+              "html": "Button Text Goes Here"
+          },
+          "privacy": {
+              "css": {
+                  "valid-css-properties": "valid-css-values-goes-here"
+              },
+              "html": "Valid html goes here"
+          }
+    },
     "style": {
         "replacements": [
             {
@@ -114,6 +136,7 @@ leadpages-template/
         }
     ],
     "variables": {}
+}
 }</pre>
             <h3 id="s02-h3-02">Available Properties</h3>
             <div class="container-fluid json-props" id="s02-properties">
@@ -179,32 +202,42 @@ leadpages-template/
                 </div>
                 <div class="row content_container" id="s02-property07">
                     <div class="col-md-2" id="s02-property07-col01">
-                        <div class="prop" id="s02-property07-prop"><strong>elements</strong> (array)</div>
+                        <div class="prop" id="s02-property07-prop"><strong>form</strong> (object)</div>
                         <div class="req" id="s02-property07-req"><strong>required</strong></div>
                     </div>
                     <div class="col-md-10" id="s02-property07-col02">
-                        <div class="desc" id="s02-property07-desc">An array of objects that informs the LeadPages editor of elements that are editable. Requires at least one object to upload successfully.</div>
-                        <div class="example" id="s02-property07-example"><strong>Example(s):</strong> See <a href="#s04">each element</a> for more information on the available object properties.</div>
+                        <div class="desc" id="s02-property07-desc">An array of objects that customize the LeadBox™ appearances. As of syntax 4.0, the form object replaces the /meta/form.html method to customize the LeadBox™. If you still have form.html, you’ll see a <em>Deprecated form.html</em> warning.</div>
+                        <div class="example" id="s02-property07-example"><strong>Example(s):</strong> <a href="#s02">See Meta/Instructions</a></div>
                     </div>
                 </div>
                 <div class="row content_container" id="s02-property08">
                     <div class="col-md-2" id="s02-property08-col01">
-                        <div class="prop" id="s02-property08-prop"><strong>style</strong> (object)</div>
+                        <div class="prop" id="s02-property08-prop"><strong>elements</strong> (array)</div>
                         <div class="req" id="s02-property08-req"><strong>required</strong></div>
                     </div>
                     <div class="col-md-10" id="s02-property08-col02">
-                        <div class="desc" id="s02-property08-desc">An object containing an array of <strong>replacement</strong> objects (read: instructions).</div>
-                        <div class="example" id="s02-property08-example"><strong>Example(s):</strong> See the <a href="#s03">styles</a> section for more information on the available properties of a replacement object.</div>
+                        <div class="desc" id="s02-property08-desc">An array of objects that informs the LeadPages editor of elements that are editable. Requires at least one object to upload successfully.</div>
+                        <div class="example" id="s02-property08-example"><strong>Example(s):</strong> See <a href="#s04">each element</a> for more information on the available object properties.</div>
                     </div>
                 </div>
                 <div class="row content_container" id="s02-property09">
                     <div class="col-md-2" id="s02-property09-col01">
-                        <div class="prop" id="s02-property09-prop"><strong>variables</strong> (object)</div>
-                        <div class="req" id="s02-property09-req"><em>optional</em></div>
+                        <div class="prop" id="s02-property09-prop"><strong>style</strong> (object)</div>
+                        <div class="req" id="s02-property09-req"><strong>required</strong></div>
                     </div>
                     <div class="col-md-10" id="s02-property09-col02">
-                        <div class="desc" id="s02-property09-desc">An object that connects an <a href="#s04">element</a> with configuration data and any Javascript methods that might utilize the <strong>leadpages_input_data</strong> object.</div>
-                        <div class="example" id="s02-property09-example"><strong>Example(s):</strong> See the <a href="#ex11">Facebook Share Button</a> for an example.</div>
+                        <div class="desc" id="s02-property09-desc">An object containing an array of <strong>replacement</strong> objects (read: instructions).</div>
+                        <div class="example" id="s02-property09-example"><strong>Example(s):</strong> See the <a href="#s03">styles</a> section for more information on the available properties of a replacement object.</div>
+                    </div>
+                </div>
+                <div class="row content_container" id="s02-property10">
+                    <div class="col-md-2" id="s02-property10-col01">
+                        <div class="prop" id="s02-property10-prop"><strong>variables</strong> (object)</div>
+                        <div class="req" id="s02-property10-req"><em>optional</em></div>
+                    </div>
+                    <div class="col-md-10" id="s02-property10-col02">
+                        <div class="desc" id="s02-property10-desc">An object that connects an <a href="#s04">element</a> with configuration data and any Javascript methods that might utilize the <strong>leadpages_input_data</strong> object.</div>
+                        <div class="example" id="s02-property10-example"><strong>Example(s):</strong> See the <a href="#ex11">Facebook Share Button</a> for an example.</div>
                     </div>
                 </div>
             </div>
@@ -222,7 +255,7 @@ leadpages-template/
             </p>
 
             <h3 id="s03-h3-01">"Replacement" Objects</h3>
-            <pre id="s03-pre">
+            <pre data-lead-id="s03-pre">
 "style": {
     "replacements": [
         {
@@ -289,13 +322,13 @@ leadpages-template/
                         <div class="panel panel-info" id="ex01-panel01">
                             <div class="panel-heading" id="ex01-panel01-head">index.html snippet</div>
                             <div class="panel-body" id="ex01-panel01-body">
-                                <pre id="ex01-pre01">&lt;div id=&quot;ex01-container&quot; class=&quot;well&quot;&gt;...&lt;/div&gt;</pre>
+                                <pre data-lead-id="ex01-pre01">&lt;div data-lead-id=&quot;ex01-container&quot;&gt;...&lt;/div&gt;</pre>
                             </div>
                         </div>
                         <div class="panel panel-info" id="ex01-panel02">
                             <div class="panel-heading" id="ex01-panel02-head">meta/template.json snippet</div>
                             <div class="panel-body" id="ex01-panel02-body">
-<pre id="ex01-pre02">
+<pre data-lead-id="ex01-pre02">
 "elements": [{
     "id": "ex01-container",
     "name": "Container",
@@ -317,13 +350,13 @@ leadpages-template/
                         <div class="panel panel-info" id="ex02-panel01">
                             <div class="panel-heading" id="ex02-panel01-head">index.html snippet</div>
                             <div class="panel-body" id="ex02-panel01-body">
-                                <pre id="ex02-pre01">&lt;p id=&quot;s01-lead&quot;&gt;...&lt;/p&gt;</pre>
+                                <pre data-lead-id="ex02-pre01">&lt;p data-lead-id=&quot;s01-lead&quot;&gt;...&lt;/p&gt;</pre>
                             </div>
                         </div>
                         <div class="panel panel-info" id="ex02-panel02">
                             <div class="panel-heading" id="ex02-panel02-head">meta/template.json snippet</div>
                             <div class="panel-body" id="ex02-panel02-body">
-<pre id="ex02-pre02">
+<pre data-lead-id="ex02-pre02">
 "elements": [{
     "id": "ex02-lead",
     "name": "Lead",
@@ -346,13 +379,13 @@ leadpages-template/
                         <div class="panel panel-info" id="ex03-panel01">
                             <div class="panel-heading" id="ex03-panel01-head">index.html snippet</div>
                             <div class="panel-body" id="ex03-panel01-body">
-                                <pre id="ex03-pre01">&lt;img src=&quot;img/340x120.png&quot; id=&quot;ex03-image&quot; alt=&quot;&quot; class=&quot;thumbnail&quot; /&gt;</pre>
+                                <pre data-lead-id="ex03-pre01">&lt;img src=&quot;img/340x120.png&quot; data-lead-id=&quot;ex03-image&quot; alt=&quot;&quot; class=&quot;thumbnail&quot; /&gt;</pre>
                             </div>
                         </div>
                         <div class="panel panel-info" id="ex03-panel02">
                             <div class="panel-heading" id="ex03-panel02-head">meta/template.json snippet</div>
                             <div class="panel-body" id="ex03-panel02-body">
-<pre id="ex03-pre02">
+<pre data-lead-id="ex03-pre02">
 "elements": [{
     "id": "ex03-image",
     "name": "Example Image",
@@ -372,19 +405,19 @@ leadpages-template/
                 <div class="row content_container" id="ex04" >
                     <h3 id="ex04-h3">Background Images</h3>
                     <div class="col-md-4" id="ex04-col01">
-                        <p id="ex04-lead">The "background-image" type (<em>meta/template.json</em>) is identical to the "image" type, minus the hover effect in the template editor. This subtle difference is very important for templates that utilize large images under other HTML elements.</p>
+                        <p id="ex04-lead">The "background-image" type (<em>meta/template.json</em>) is identical to the "image" type, minus the hover effect in the template editor. This subtle difference is very important for templates that utilize large images under other HTML elements. This is a hack using <em>position: absolute/fixed;</em> to position the image within a parent container with <em>position:relative</em>. We currently DO NOT support css background image.</p>
                     </div>
                     <div class="col-md-8" id="ex04-col02">
                         <div class="panel panel-info" id="ex04-panel01">
                             <div class="panel-heading" id="ex04-panel01-head">index.html snippet</div>
                             <div class="panel-body" id="ex04-panel01-body">
-                                <pre id="ex04-pre01">&lt;div id=&quot;ex04-background-image&quot;&gt;...&lt;/div&gt;</pre>
+                                <pre data-lead-id="ex04-pre01">&lt;div data-lead-id=&quot;ex04-background-image&quot;&gt;...&lt;/div&gt;</pre>
                             </div>
                         </div>
                         <div class="panel panel-info" id="ex04-panel02">
                             <div class="panel-heading" id="ex04-panel02-head">meta/template.json snippet</div>
                             <div class="panel-body" id="ex04-panel02-body">
-<pre id="ex04-pre02">
+<pre data-lead-id="ex04-pre02">
 "elements": [{
     "id": "ex04-background-image",
     "name": "Example 04 Bakground Image",
@@ -415,13 +448,13 @@ leadpages-template/
                         <div class="panel panel-info" id="ex05-panel01">
                             <div class="panel-heading" id="ex05-panel01-head">index.html snippet</div>
                             <div class="panel-body" id="ex05-panel01-body">
-                                <pre id="ex05-pre01">&lt;div id=&quot;ex05-video&quot;&gt;...&lt;/div&gt;</pre>
+                                <pre data-lead-id="ex05-pre01">&lt;div data-lead-id=&quot;ex05-video&quot;&gt;...&lt;/div&gt;</pre>
                             </div>
                         </div>
                         <div class="panel panel-info" id="ex05-panel02">
                             <div class="panel-heading" id="ex05-panel02-head">meta/template.json snippet</div>
                             <div class="panel-body" id="ex05-panel02-body">
-<pre id="ex05-pre02">
+<pre data-lead-id="ex05-pre02">
 "elements": [{
     "type": "video",
     "id": "ex05-video",
@@ -444,13 +477,13 @@ leadpages-template/
                         <div class="panel panel-info" id="ex06-panel01">
                             <div class="panel-heading" id="ex06-panel01-head">index.html snippet</div>
                             <div class="panel-body" id="ex06-panel01-body">
-                                <pre id="ex06-pre01">&lt;a href=&quot;http://example.com&quot; id=&quot;ex06-link&quot;&gt;Example&lt;/a&gt;</pre>
+                                <pre data-lead-id="ex06-pre01">&lt;a href=&quot;http://example.com&quot; data-lead-id=&quot;ex06-link&quot;&gt;Example&lt;/a&gt;</pre>
                             </div>
                         </div>
                         <div class="panel panel-info" id="ex06-panel02">
                             <div class="panel-heading" id="ex06-panel02-head">meta/template.json snippet</div>
                             <div class="panel-body" id="ex06-panel02-body">
-<pre id="ex06-pre02">
+<pre data-lead-id="ex06-pre02">
 "elements": [{
     "type": "link",
     "id": "ex06-link",
@@ -473,13 +506,13 @@ leadpages-template/
                         <div class="panel panel-info" id="ex07-panel01">
                             <div class="panel-heading" id="ex07-panel01-head">index.html snippet</div>
                             <div class="panel-body" id="ex07-panel01-body">
-                                <pre id="ex07-pre01">&lt;a href=&quot;http://example.com&quot; id=&quot;ex06-image-link&quot;&gt;&lt;img src=&quot;img/340x120.png&quot; alt=&quot;&quot; class=&quot;thumbnail&quot; /&gt;&lt;/a&gt;</pre>
+                                <pre data-lead-id="ex07-pre01">&lt;a href=&quot;http://example.com&quot; data-lead-id=&quot;ex07-image-link&quot;&gt;&lt;img src=&quot;img/340x120.png&quot; alt=&quot;&quot; class=&quot;thumbnail&quot; /&gt;&lt;/a&gt;</pre>
                             </div>
                         </div>
                         <div class="panel panel-info" id="ex07-panel02">
                             <div class="panel-heading" id="ex07-panel02-head">meta/template.json snippet</div>
                             <div class="panel-body" id="ex07-panel02-body">
-<pre id="ex07-pre02">
+<pre data-lead-id="ex07-pre02">
 "elements": [{
     "type": "image-link",
     "id": "ex07-image-link",
@@ -499,19 +532,19 @@ leadpages-template/
                     <h3 id="ex08-h3">Embed</h3>
                     <div class="col-md-4" id="ex08-col01">
                         <p id="ex08-lead">The "embed" type (<em>meta/template.json</em>) designates a container that can house embeddable content such as a Twitter widget, a Chatroll, SoundCloud track, or more.</p>
-                        <div id="ex08-embed" class="well">Embed Something Here</div>
+                        <div id="ex08-embed" class="well">Embed Something Here like http://tlk.io/</div>
                     </div>
                     <div class="col-md-8" id="ex08-col02">
                         <div class="panel panel-info" id="ex08-panel01">
                             <div class="panel-heading" id="ex08-panel01-head">index.html snippet</div>
                             <div class="panel-body" id="ex08-panel01-body">
-                                <pre id="ex08-pre01">&lt;div id=&quot;ex08-embed&quot; class=&quot;well&quot;&gt;Embed Something Here&lt;/div&gt;</pre>
+                                <pre data-lead-id="ex08-pre01">&lt;div data-lead-id=&quot;ex08-embed&quot; class=&quot;well&quot;&gt;Embed Something Here like http://tlk.io/&lt;/div&gt;</pre>
                             </div>
                         </div>
                         <div class="panel panel-info" id="ex08-panel02">
                             <div class="panel-heading" id="ex08-panel02-head">meta/template.json snippet</div>
                             <div class="panel-body" id="ex08-panel02-body">
-<pre id="ex08-pre02">
+<pre data-lead-id="ex08-pre02">
 "elements": [{
     "type": "embed",
     "id": "ex08-embed",
@@ -522,7 +555,7 @@ leadpages-template/
                         <div class="panel panel-info" id="ex08-panel03">
                             <div class="panel-heading" id="ex08-panel03-head">example embed snippet</div>
                             <div class="panel-body" id="ex08-panel03-body">
-                                <pre id="ex08-pre03">&lt;iframe width=&quot;100%&quot; height=&quot;450&quot; scrolling=&quot;no&quot; frameborder=&quot;no&quot; src=&quot;https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/139058424&amp;amp;auto_play=false&amp;amp;hide_related=false&amp;amp;show_comments=true&amp;amp;show_user=true&amp;amp;show_reposts=false&amp;amp;visual=true&quot;&gt;&lt;/iframe&gt;</pre>
+                                <pre data-lead-id="ex08-pre03">&lt;iframe width=&quot;100%&quot; height=&quot;450&quot; scrolling=&quot;no&quot; frameborder=&quot;no&quot; src=&quot;https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/139058424&amp;amp;auto_play=false&amp;amp;hide_related=false&amp;amp;show_comments=true&amp;amp;show_user=true&amp;amp;show_reposts=false&amp;amp;visual=true&quot;&gt;&lt;/iframe&gt;</pre>
                             </div>
                         </div>
                     </div>
@@ -565,29 +598,29 @@ leadpages-template/
                         <div class="panel panel-info" id="ex09-panel01">
                             <div class="panel-heading" id="ex09-panel01-head">index.html snippet</div>
                             <div class="panel-body" id="ex09-panel01-body">
-<pre id="ex09-pre01">&lt;div id=&quot;ex09-countdown&quot;&gt;
+<pre data-lead-id="ex09-pre01">&lt;div data-lead-id=&quot;ex09-countdown&quot;&gt;
     &lt;ul class=&quot;countdown&quot;&gt;
         &lt;li&gt;
             &lt;div class=&quot;flap&quot;&gt;&lt;span class=&quot;days&quot;&gt;6&lt;/span&gt;&lt;/div&gt;
-            &lt;p class=&quot;timeRefDays&quot; id=&quot;days-text&quot;&gt;Days&lt;/p&gt;
+            &lt;p class=&quot;timeRefDays&quot; data-lead-id=&quot;days-text&quot;&gt;Days&lt;/p&gt;
         &lt;/li&gt;
         &lt;li&gt;
             &lt;div class=&quot;flap&quot;&gt;
                 &lt;span class=&quot;hours&quot;&gt;4&lt;/span&gt;
             &lt;/div&gt;
-            &lt;p class=&quot;timeRefHours&quot; id=&quot;hours-text&quot;&gt;Hours&lt;/p&gt;
+            &lt;p class=&quot;timeRefHours&quot; data-lead-id=&quot;hours-text&quot;&gt;Hours&lt;/p&gt;
         &lt;/li&gt;
         &lt;li&gt;
             &lt;div class=&quot;flap&quot;&gt;
                 &lt;span class=&quot;minutes&quot;&gt;12&lt;/span&gt;
             &lt;/div&gt;
-            &lt;p class=&quot;timeRefMinutes&quot; id=&quot;minutes-text&quot;&gt;Minutes&lt;/p&gt;
+            &lt;p class=&quot;timeRefMinutes&quot; data-lead-id=&quot;minutes-text&quot;&gt;Minutes&lt;/p&gt;
         &lt;/li&gt;
         &lt;li&gt;
             &lt;div class=&quot;flap&quot;&gt;
                 &lt;span class=&quot;seconds&quot;&gt;44&lt;/span&gt;
             &lt;/div&gt;
-            &lt;p class=&quot;timeRefSeconds&quot; id=&quot;seconds-text&quot;&gt;Seconds&lt;/p&gt;
+            &lt;p class=&quot;timeRefSeconds&quot; data-lead-id=&quot;seconds-text&quot;&gt;Seconds&lt;/p&gt;
         &lt;/li&gt;
     &lt;/ul&gt;
 &lt;/div&gt;</pre>
@@ -596,7 +629,7 @@ leadpages-template/
                         <div class="panel panel-info" id="ex09-panel02">
                             <div class="panel-heading" id="ex09-panel02-head">meta/template.json snippet</div>
                             <div class="panel-body" id="ex09-panel02-body">
-<pre id="ex09-pre02">
+<pre data-lead-id="ex09-pre02">
 "elements": [{
     "type": "countdown",
     "id": "ex09-countdown",
@@ -621,8 +654,8 @@ leadpages-template/
                         <div class="panel panel-info" id="ex10-panel01">
                             <div class="panel-heading" id="ex10-panel01-head">index.html snippet</div>
                             <div class="panel-body" id="ex10-panel01-body">
-                                <pre id="ex10-pre01">
-&lt;div id=&quot;ex10-facebook-button&quot; class=&quot;pull-left thumbnail&quot;&gt;
+                                <pre data-lead-id="ex10-pre01">
+&lt;div data-lead-id=&quot;ex10-facebook-button&quot;&gt;
     &lt;img src=&quot;img/fb-blue-100.png&quot; alt=&quot;&quot; /&gt;
 &lt;/div&gt;</pre>
                             </div>
@@ -630,7 +663,7 @@ leadpages-template/
                         <div class="panel panel-info" id="ex10-panel02">
                             <div class="panel-heading" id="ex10-panel02-head">meta/template.json snippet</div>
                             <div class="panel-body" id="ex10-panel02-body">
-<pre id="ex10-pre02">
+<pre data-lead-id="ex10-pre02">
 "elements": [{
     "type": "facebook-button",
     "id": "ex10-facebook-button",
@@ -657,8 +690,8 @@ leadpages-template/
                         <div class="panel panel-info" id="ex11-panel01">
                             <div class="panel-heading" id="ex11-panel01-head">index.html snippet</div>
                             <div class="panel-body" id="ex11-panel01-body">
-                                <pre id="ex11-pre01">
-&lt;a href=&quot;&quot; id=&quot;ex11-dynamic&quot; class=&quot;pop-facebook&quot;&gt;
+                                <pre data-lead-id="ex11-pre01">
+&lt;a href=&quot;&quot; data-lead-id=&quot;ex11-dynamic&quot; class=&quot;pop-facebook&quot;&gt;
     &lt;img src=&quot;img/fb-blue-100.png&quot; alt=&quot;&quot; /&gt;
 &lt;/a&gt;</pre>
                             </div>
@@ -666,7 +699,7 @@ leadpages-template/
                         <div class="panel panel-info" id="ex11-panel02">
                             <div class="panel-heading" id="ex11-panel02-head">meta/template.json snippet</div>
                             <div class="panel-body" id="ex11-panel02-body">
-<pre id="ex11-pre02">
+<pre data-lead-id="ex11-pre02">
 "elements": [{
     "type": "dynamic",
     "id": "ex11-dynamic",
@@ -702,13 +735,13 @@ leadpages-template/
                         <div class="panel panel-info" id="ex12-panel01">
                             <div class="panel-heading" id="ex12-panel01-head">index.html snippet</div>
                             <div class="panel-body" id="ex12-panel01-body">
-                                <pre id="ex12-pre01">&lt;div id=&quot;ex12-facebook-comments&quot; class=&quot;well&quot;&gt;Facebook Comments Here&lt;/div&gt;</pre>
+                                <pre data-lead-id="ex12-pre01">&lt;div data-lead-id=&quot;ex12-facebook-comments&quot; class=&quot;well&quot;&gt;Facebook Comments Here&lt;/div&gt;</pre>
                             </div>
                         </div>
                         <div class="panel panel-info" id="ex12-panel02">
                             <div class="panel-heading" id="ex12-panel02-head">meta/template.json snippet</div>
                             <div class="panel-body" id="ex12-panel02-body">
-<pre id="ex12-pre02">"elements": [{
+<pre data-lead-id="ex12-pre02">"elements": [{
     "type": "facebook-comments",
     "id": "ex12-facebook-comments",
     "name": "Ex.12: Facebook Comments"
@@ -732,8 +765,8 @@ leadpages-template/
                         <div class="panel panel-info" id="ex13-panel01">
                             <div class="panel-heading" id="ex13-panel01-head">index.html snippet</div>
                             <div class="panel-body" id="ex13-panel01-body">
-                                <pre id="ex13-pre01">
-&lt;div id=&quot;ex13-twitter-button&quot;&gt;
+                                <pre data-lead-id="ex13-pre01">
+&lt;div data-lead-id=&quot;ex13-twitter-button&quot;&gt;
     &lt;img src=&quot;img/twitter-100.png&quot; alt=&quot;&quot; /&gt;
 &lt;/div&gt;</pre>
                             </div>
@@ -741,7 +774,7 @@ leadpages-template/
                         <div class="panel panel-info" id="ex13-panel02">
                             <div class="panel-heading" id="ex13-panel02-head">meta/template.json snippet</div>
                             <div class="panel-body" id="ex13-panel02-body">
-<pre id="ex13-pre02">
+<pre data-lead-id="ex13-pre02">
 "elements": [{
     "type": "twitter-button",
     "id": "ex13-twitter-button",
@@ -766,8 +799,8 @@ leadpages-template/
                         <div class="panel panel-info" id="ex14-panel01">
                             <div class="panel-heading" id="ex14-panel01-head">index.html snippet</div>
                             <div class="panel-body" id="ex14-panel01-body">
-                                <pre id="ex114-pre01">
-&lt;div id=&quot;ex14-google-button&quot;&gt;
+                                <pre data-lead-id="ex114-pre01">
+&lt;div data-lead-id=&quot;ex14-google-button&quot;&gt;
     &lt;img src=&quot;img/google-100.png&quot; alt=&quot;&quot; /&gt;
 &lt;/div&gt;</pre>
                             </div>
@@ -775,7 +808,7 @@ leadpages-template/
                         <div class="panel panel-info" id="ex14-panel02">
                             <div class="panel-heading" id="ex14-panel02-head">meta/template.json snippet</div>
                             <div class="panel-body" id="ex14-panel02-body">
-<pre id="ex14-pre02">
+<pre data-lead-id="ex14-pre02">
 "elements": [{
     "type": "google-button",
     "id": "ex14-google-button",
@@ -791,7 +824,7 @@ leadpages-template/
                 <div class="row content_container" id="ex15">
                     <h3 id="ex15-h3">LeadBoxes&trade;</h3>
                     <div class="col-md-4" id="ex15-col01">
-                        <p id="ex15-lead">The "link" and "image-link" types (<em>meta/template.json</em>) can be pre-configured to trigger an opt-in form with one simple change. The addition of the "#/optin" value for the <em>data.href</em> property will default a "link" or "image-link" element to use the opt-in form instead of a anchor link. The default look-and-feel of an opt-in form can be further configured within the <strong><a href="#s05">meta/form.html</a></strong> file.</p>
+                        <p id="ex15-lead">The "link" and "image-link" types (<em>meta/template.json</em>) can be pre-configured to trigger an opt-in form with one simple change. The addition of the "#/optin" value for the <em>data.href</em> property will default a "link" or "image-link" element to use the opt-in form instead of a anchor link. The default look-and-feel of an opt-in form can be further configured within the <strong><a href="#s05">"meta/form.html"</a></strong> file.</p>
                         <p><a class="btn btn-warning btn-lg" id="ex15-link">Opt-in Button</a></p>
                         <p><a id="ex15-image-link"><img src="img/240x180.png" alt="" /></a></p>
                     </div>
@@ -799,16 +832,16 @@ leadpages-template/
                         <div class="panel panel-info" id="ex15-panel01">
                             <div class="panel-heading" id="ex15-panel01-head">index.html snippet</div>
                             <div class="panel-body" id="ex15-panel01-body01">
-                                <pre id="ex15-pre01">&lt;a class=&quot;btn btn-warning btn-lg&quot; id=&quot;ex15-link&quot;&gt;Opt-in Button&lt;/a&gt;</pre>
+                                <pre data-lead-id="ex15-pre01">&lt;a class=&quot;btn btn-warning btn-lg&quot; data-lead-id=&quot;ex15-link&quot;&gt;Opt-in Button&lt;/a&gt;</pre>
                             </div>
                             <div class="panel-body" id="ex15-panel01-body02">
-                                <pre id="ex15-pre02">&lt;a id=&quot;ex15-image-link&quot;&gt;&lt;img src=&quot;img/240x180.png&quot; alt=&quot;&quot; class=&quot;thumbnail&quot; /&gt;&lt;/a&gt;</pre>
+                                <pre data-lead-id="ex15-pre02">&lt;a data-lead-id=&quot;ex15-image-link&quot;&gt;&lt;img src=&quot;img/240x180.png&quot; alt=&quot;&quot; class=&quot;thumbnail&quot; /&gt;&lt;/a&gt;</pre>
                             </div>
                         </div>
                         <div class="panel panel-info" id="ex15-panel02">
                             <div class="panel-heading" id="ex15-panel02-head">meta/template.json snippet</div>
                             <div class="panel-body" id="ex15-panel02-body01">
-<pre id="ex15-pre03">
+<pre data-lead-id="ex15-pre03">
 "elements": [{
     "type": "link",
     "id": "ex15-link",
@@ -819,7 +852,7 @@ leadpages-template/
 }]</pre>
                             </div>
                             <div class="panel-body" id="ex15-panel02-body02">
-<pre id="ex15-pre04">
+<pre data-lead-id="ex15-pre04">
 "elements": [{
     "type": "image-link",
     "id": "ex15-image-link",
@@ -834,6 +867,97 @@ leadpages-template/
                     </div>
                 </div>
                 <!-- /ex15 -->
+
+                <!-- ex16 -->
+                <div class="row content_container" id="ex16">
+                    <h3 id="ex16-h3">Dynamic Element</h3>
+                    <div class="col-md-4" id="ex1-col01">
+                        <p id="ex16-lead">
+                            There are a lot of uses for Dynamic Elements, you've probably came across one already such as the [Facebook Share Button](#facebook-share-button). Another example is video background (see the right for the sample codes). Basically, if you have a widget or something that needs to point at a specific location while making it editable to the users, Dynamic Element maybe a solution for you.
+                            <br><br>
+                            Another benefit of Dynamic Element is that the user will able to have a default element that is both available during preview and after published. As you noticed that other elements don't show a default images/videos if the user didn't upload any after publishing.
+                            <br><br>
+                            <strong>What is LEADPAGES_INPUT_DATA??</strong>
+                            <br><br>
+                            <em>LEADPAGES_INPUT_DATA</em> is a LeadPages™ specific variable that expose the ability to overwrite the default value defined in `template.json` and in the LeadPages™ published pages. If you defined this variable in your js file, this is the value that is overwritten by the user in the builder. So think of it as a bridge between the template and the builder.
+                            <br><br>
+                            <strong>Tip</strong>
+                            <p>If you are going to have a video background, find one that's without sound otherwise you can annoy the heck out of your potential buyers when they preview your template.</p>
+                        </p>
+
+                        <div data-lead-id="ex16-dynamic">
+                            <iframe class="video-player" width="100%" height="100%" src="///www.youtube.com/embed/YZKFFX4hVps?rel=0&amp;controls=0&amp;loop=0&amp;showinfo=0&amp;autoplay=1&amp;" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div class="col-md-8" id="ex16-col02">
+                        <div class="panel panel-info" id="ex16-panel01">
+                            <div class="panel-heading" id="ex16-panel01-head">
+                                index.html snippet
+                            </div>
+                            <div class="panel-body" id="ex16-panel01-body01">
+<pre data-lead-id="ex16-pre01">
+&lt;div data-lead-id=&quot;video-dynamic&quot;&gt;
+    &lt;iframe class=&quot;video-player&quot; width=&quot;100%&quot; height=&quot;100%&quot; src=&quot;//www.youtube.com/embed/dhzI3Om9QIQ?rel=0&amp;controls=0&amp;loop=1&amp;showinfo=0&amp;autoplay=1&amp;playlist=8pEk9W5cm1k&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+</pre>
+                            </div>
+                        </div>
+                        <div class="panel panel-info" id="ex16-panel02">
+                            <div class="panel-heading" id="ex16-panel02-head">meta/template.json snippet</div>
+                            <div class="panel-body" id="ex16-panel02-body01">
+<pre data-lead-id="ex16-pre02">
+{
+  "elements": [
+    {
+      "id": "video-dynamic",
+      "name": "Video Background",
+      "type": "dynamic",
+      "data": {
+        "variables": ["videourl"]
+      }
+    }
+  ],
+  "variables": {
+      "videourl": {
+            "variable": "videourl",
+            "default": "//www.youtube.com/embed/dhzI3Om9QIQ?rel=0&amp;controls=0&amp;loop=1&amp;showinfo=0&amp;autoplay=1&amp;playlist=dhzI3Om9QIQ",
+            "name": "The URL of the video",
+            "controls": true
+      }
+  }
+}
+</pre>
+                                </div>
+                            </div>
+                            <div class="panel panel-info" id="ex16-panel03">
+                                <div class="panel-heading" id="ex16-panel03-head">
+                                    js/functions.js snippet
+                                </div>
+                                <div class="panel-body" id="ex16-panel03-body01">
+<pre data-lead-id="ex16-pre02">
+    /* 
+      ---------- TEMPLATE DATA ----------
+      Same url as the `default` under the `variables` object in template.json
+      This url will be overriden by the user
+
+      Yes, the // at the end is needed for now. Fix is coming out soon!
+    */
+
+    var leadpages_input_data = {
+      'videourl'  : '//www.youtube.com/embed/dhzI3Om9QIQ?rel=0&amp;controls=0&amp;loop=1&amp;showinfo=0&amp;autoplay=1&amp;playlist=dhzI3Om9QIQ' //
+    };
+
+    //Set the url for the video
+    $(function() {
+        $('.video-player').attr('src', leadpages_input_data.videourl);
+    });
+</pre>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- /ex16 -->
             </div>
             <!-- /element examples -->
             <div class="totop" id="s04-totop"><a href="#" id="s04-totop-link">Back to Top</a></div>
@@ -848,21 +972,8 @@ leadpages-template/
             <div class="container-fluid json-props" id="s05-properties">
                 <div class="row content_container">
                     <div class="col-md-6" id="s05-col01">
-                        <p id="s05-lead">The LeadBoxes opt-in form can be configured with a default aesthetic and copy options (as seen in the before/after images below and the related <em>meta/form.html</em> snippet).</p>
+                        <p id="s05-lead">The LeadBoxes opt-in form can be configured with a default aesthetic and copy options using the <em>form</em> object within <strong>template.json</strong>.</p>
                         <div><img src="img/leadbox-before.png" alt="" class="img-responsive" id="s05-img01" /></div>
-                        <p id="s05-img01-caption"><strong>Before</strong> (default)</p>
-                        <div><img src="img/leadbox-after.png" alt="" class="img-responsive" id="s05-img02" /></div>
-                        <p id="s05-img02-caption"><strong>After</strong> (<em>meta/form.html</em>)</p>
-                        <h3 id="s05-h3-01">Available Meta Properties</h3>
-                        <ul class="list-group" id="s05-list-group">
-                            <li class="list-group-item"><strong>lp-popup-form-css</strong>: add form-specific CSS</li>
-                            <li class="list-group-item"><strong>lp-popup-form-title-html</strong>: set the default title</li>
-                            <li class="list-group-item"><strong>lp-popup-form-title-css</strong>: add title-specific CSS</li>
-                            <li class="list-group-item"><strong>lp-popup-form-submit-html</strong>: set the default submit button title</li>
-                            <li class="list-group-item"><strong>lp-popup-form-submit-css</strong>: add button-specific CSS</li>
-                            <li class="list-group-item"><strong>lp-popup-form-privacy-html</strong>: set the default privacy statement</li>
-                            <li class="list-group-item"><strong>lp-popup-form-privacy-css</strong>: add privacy-specific CSS</li>
-                        </ul>
                     </div>
                     <div class="col-md-6" id="s05-col02">
                        <div class="panel panel-info">
@@ -870,53 +981,38 @@ leadpages-template/
                                 meta/form.html snippet
                             </div>
                             <div class="panel-body" id="s05-panel-body">
-                                <pre id="s05-pre">
-&lt;meta
-    name=&quot;lp-popup-form-css&quot;
-    content=&quot;
-        background-color: #D3D3D3;
-        border-color: #FFF;
-        border-width: 2pt;
-        border-style: solid;&quot;
-/&gt;
-
-&lt;meta
-    name=&quot;lp-popup-form-title-html&quot;
-    content=&quot;Enter Your Email For Developer Updates&quot;
-/&gt;
-
-&lt;meta
-    name=&quot;lp-popup-form-title-css&quot;
-    content=&quot;
-        font-size: 14pt;
-        color: #257386;
-        text-align:center;&quot;
-/&gt;
-
-&lt;meta
-    name=&quot;lp-popup-form-submit-html&quot;
-    content=&quot;Get Free Updates&quot;
-/&gt;
-
-&lt;meta
-    name=&quot;lp-popup-form-submit-css&quot;
-    content=&quot;
-        background-color: #257386;
-        font-size: 16pt;
-        text-align:center;&quot;
-/&gt;
-
-&lt;meta
-    name=&quot;lp-popup-form-privacy-html&quot;
-    content=&quot;We value your privacy.&quot;
-/&gt;
-
-&lt;meta
-    name=&quot;lp-popup-form-privacy-css&quot;
-    content=&quot;
-        text-align: center;
-        font-size: 12pt;&quot;
-/&gt;</pre>
+                                <pre data-lead-id="s05-pre">
+"form": {
+    "title": {
+        "css": {
+            "font-family": "Helvetica, Arial, sans-serif",
+            "font-size": "18pt;",
+            "letter-spacing": "0em;"
+        },
+        "html": "&lt;strong&gt;Enter your email address below to reserve _______... it's 100% FREE!&lt;/stron&gt;>"
+    },
+    "submit": {
+        "css": {
+            "background-color": "#ffcb01;",
+            "border-color": "#ffb403;",
+            "border-width": "0pt;",
+            "border-style": "solid;",
+            "font-family": "Helvetica, Arial, sans-serif",
+            "font-size": "14pt;",
+            "letter-spacing": "-0.1em;"
+        },
+        "html": "Free Instant Access &raquo;"
+    },
+    "privacy": {
+        "css": {
+            "font-family": "Helvetica, Arial, sans-serif",
+            "font-size": "12pt;",
+            "letter-spacing": "-0.1em;"
+        },
+        "html": "&lt;div&gt;&lt;i class=\"icon-lock\">&lt;/i&gt;We hate SPAM and promise to keep your email address safe. &lt;div&gt;"
+    }
+}
+</pre>
                             </div>
                         </div>
                     </div>
@@ -931,7 +1027,8 @@ leadpages-template/
     <div class="content_container" id="s06">
         <div class="container">
             <h1 id="s06-h1">About</h1>
-            <p class="lead" id="s06-lead">This page was created from a LeadPages&trade; template. We thought the best way to document and share the various subtleties of a LeadPages template was to build one and publish a page for all to see.<br><br>
+            <p class="lead" id="s06-lead">This page was created from a LeadPages&trade; template. We thought the best way to document and share the various subtleties of a LeadPages template was to build one and publish a page for all to see.
+            <br><br>
             So, if you're interested in creating your own template, we invite you to download this template from our <a href="https://github.com/LeadPages/template-starter-kit" target="_blank">GitHub repository</a> and take a look at the <a href="https://github.com/LeadPages/template-starter-kit#template-starter-kit" target="_blank">README</a>.<br><br>
             -- <em>The LeadPages Engineering Team</em>
             </p>
