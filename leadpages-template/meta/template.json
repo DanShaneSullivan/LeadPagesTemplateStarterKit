@@ -1,6 +1,6 @@
 {
-    "id": "LP-TSK-01",
-    "name": "LeadPages Template Starter Kit",
+    "id": "<%= template_id %>",
+    "name": "<%= template_name %>",
     "mobile": true,
     "notes": "Updated with Syntax 4.0",
     "syntax": 4,
