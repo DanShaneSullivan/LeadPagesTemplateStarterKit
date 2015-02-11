@@ -11,7 +11,7 @@ We thought creating a full-featured template would be a great way to document an
 
 ###An awesomer way to get started: LeadPages™ Template Starter Kit Yeoman Generator:
 
-If you are comfortable with command lines, [NPM](http://npmjs.org), check out our [LeadPages™ Template Starter Kit Yeoman Generator](https://github.com/supawaza/lp-marketplace-template-generator). You can scaffold the template structure and start coding by just typing `yo lp-template`.
+If you are comfortable with command lines, [NPM](http://npmjs.org), check out our [LeadPages™ Template Starter Kit Yeoman Generator](https://github.com/LeadPages/LeadPagesYeoman). You can scaffold the template structure and start coding by just typing `yo lp-template`.
 
 ##Need help?
 
