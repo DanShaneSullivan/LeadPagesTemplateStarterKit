@@ -1,16 +1,16 @@
 {
-    "id": "4319",
-    "name": "Modern Webinar",
+    "id": "Marketplace Template Example",
+    "name": "Marketplace Template Example",
     "mobile": true,
-    "notes": "MAR-292, added 4/21 image pack",
+    "notes": "Initial Release 1.0",
     "syntax": 4,
-    "version": 1.13,
+    "version": 1.0,
     "style": {
         "replacements": [
             {
                 "type": "color",
                 "name": "Header Color",
-                "find": "#EC6D20"
+                "find": "#1e8cc6"
             },
             {
                 "type": "color",
@@ -30,7 +30,7 @@
             {
                 "type": "color",
                 "name": "Button Color",
-                "find": "#EC6D21"
+                "find": "#229cdc"
             },
             {
                 "type": "color",
@@ -40,7 +40,7 @@
             {
                 "type": "color",
                 "name": "Button Hover Color",
-                "find": "#DA5200"
+                "find": "#1b7cb0"
             },
             {
                 "type": "color",
@@ -114,22 +114,111 @@
             }
         ]
     },
+    "variables": {
+        "facebookurl": {
+            "variable": "facebookurl",
+            "default": "",
+            "name": "The URL to share on Facebook. Leave blank to share the current page."
+        }
+    },
     "elements": [
-        {"id": "header_wrapper", "name": "Logo Bar", "type": "container"},
-        {"id": "intro_wrapper", "name": "Banner Section", "type": "container"},
-        {"id": "countdown_wrapper", "name": "Countdown Section", "type": "container"},
-        {"id": "description_wrapper", "name": "Description Section", "type": "container"},
-        {"id": "testimonial_wrapper", "name": "Testimonial Section", "type": "container"},
-        {"id": "cta_wrapper", "name": "Call to Action Section", "type": "container"},
-        {"id": "footer_wrapper", "name": "Footer Section", "type": "container"},
-        {"id": "social_media", "name": "Social Media Section", "type": "container"},
-        {"id": "social_facebook", "name": "Facebook Icon", "type": "container"},
-        {"id": "social_twitter", "name": "Twitter Icon", "type": "container"},
-        {"id": "social_google", "name": "Google Plus Icon", "type": "container"},
-        {"id": "social_linkedin", "name": "LinkedIn Icon", "type": "container"},
-
         {
-            "id": "logo",
+            "id": "container--header-wrapper",
+            "name": "Logo Bar",
+            "type": "container"
+        },
+        {
+            "id": "container--intro-wrapper",
+            "name": "Banner Section",
+            "type": "container"
+        },
+        {
+            "id": "container--countdown-wrapper",
+            "name": "Countdown Section",
+            "type": "container"
+        },
+        {
+            "id": "container--description-wrapper",
+            "name": "Description Section",
+            "type": "container"
+        },
+        {
+            "id": "container--testimonial-wrapper",
+            "name": "Testimonial Section",
+            "type": "container"
+        },
+        {
+            "id": "container--cta-wrapper",
+            "name": "Call to Action Section",
+            "type": "container"
+        },
+        {
+            "id": "container--footer-wrapper",
+            "name": "Footer Section",
+            "type": "container"
+        },
+        {
+            "id": "container--social-media",
+            "name": "Social Media Section",
+            "type": "container"
+        },
+        {
+            "id": "container--social-facebook",
+            "name": "Facebook Icon",
+            "type": "container"
+        },
+        {
+            "id": "container--social-twitter",
+            "name": "Twitter Icon",
+            "type": "container"
+        },
+        {
+            "id": "container--social-google",
+            "name": "Google Plus Icon",
+            "type": "container"
+        },
+        {
+            "id": "container--social-linkedin",
+            "name": "LinkedIn Icon",
+            "type": "container"
+        },
+        {
+            "id": "container--imglnk-wrapper",
+            "name": "Image Link Section",
+            "type": "container"
+        },
+        {
+            "id": "container--embed-wrapper",
+            "name": "Embed Section",
+            "type": "container"
+        },
+        {
+            "id": "container--hr1",
+            "name": "Intro HorizontalRule",
+            "type": "container"
+        },
+        {
+            "id": "container--hr2",
+            "name": "Social HorizontalRule",
+            "type": "container"
+        },
+        {
+            "type": "facebook-button",
+            "id": "facebookButton--fblike",
+            "name": "Facebook Like"
+        },
+        {
+            "type": "dynamic",
+            "id": "dynamic--fbshare",
+            "name": "Facebook Share Button",
+            "data": {
+                "variables": [
+                    "facebookurl"
+                ]
+            }
+        },
+        {
+            "id": "image--logo",
             "name": "Logo",
             "type": "image",
             "comment": "Upload your logo.",
@@ -138,7 +227,7 @@
             }
         },
         {
-            "id": "intro_bg",
+            "id": "image--intro_bg",
             "name": "Banner Background Image",
             "type": "image",
             "comment": "Choose a background photo for your banner.",
@@ -158,127 +247,225 @@
                 ]
             }
         },
-		
-		{
-			"type": "embed",
-			"id": "embed_media",
-			"name": "Embed Video/Media"
-		},
-		
-		
-		{
-			"type": "link",
-			"id": "cta_1_link",
-			"name": "Primary Signup Button",
-			"data": {
-				"href": "#/optin"
-			}
-		},
-		{
-			"type": "link",
-			"id": "cta_2_link",
-			"name": "Secondary Signup Button",
-			"data": {
-				"href": "#/optin"
-			}
-		},
-		{
-			"type": "link",
-			"id": "facebook_link",
-			"name": "Facebook Link"
-		},
-		{
-			"type": "link",
-			"id": "twitter_link",
-			"name": "Twitter Link"
-		},
-		{
-			"type": "link",
-			"id": "google_link",
-			"name": "Google Plus Link"
-		},
-		{
-			"type": "link",
-			"id": "linkedin_link",
-			"name": "LinkedIn Link"
-		},
-		{
-			"type": "link",
-			"id": "footer_link_1",
-			"name": "#1 Footer Link"
-		},
-		{
-			"type": "link",
-			"id": "footer_link_2",
-			"name": "#2 Footer Link"
-		},
-		{
-			"type": "link",
-			"id": "footer_link_3",
-			"name": "#3 Footer Link"
-		},
-		{
-			"type": "link",
-			"id": "footer_link_4",
-			"name": "#4 Footer Link"
-		},
-		
-		
+        {
+            "type": "embed",
+            "id": "embed--embed_01",
+            "name": "Embed Video/Media"
+        },
+        {
+            "type": "video",
+            "id": "video--description-video",
+            "name": "Description Video/Media"
+        },
+        {
+            "type": "link",
+            "id": "link--cta_1_link",
+            "name": "Primary Signup Button",
+            "data": {
+                "href": "#/optin"
+            }
+        },
+        {
+            "type": "link",
+            "id": "link--cta_2_link",
+            "name": "Secondary Signup Button",
+            "data": {
+                "href": "#/optin"
+            }
+        },
+        {
+            "type": "link",
+            "id": "link--facebook_link",
+            "name": "Facebook Link"
+        },
+        {
+            "type": "link",
+            "id": "link--twitter_link",
+            "name": "Twitter Link"
+        },
+        {
+            "type": "link",
+            "id": "link--google_link",
+            "name": "Google Plus Link"
+        },
+        {
+            "type": "link",
+            "id": "link--linkedin_link",
+            "name": "LinkedIn Link"
+        },
+        {
+            "type": "link",
+            "id": "link--footer_link_1",
+            "name": "#1 Footer Link"
+        },
+        {
+            "type": "link",
+            "id": "link--footer_link_2",
+            "name": "#2 Footer Link"
+        },
+        {
+            "type": "link",
+            "id": "link--footer_link_3",
+            "name": "#3 Footer Link"
+        },
+        {
+            "type": "link",
+            "id": "link--footer_link_4",
+            "name": "#4 Footer Link"
+        },
         {
             "type": "countdown",
-            "id": "launch_countdown",
+            "id": "countdown--launch_countdown",
             "name": "Registration Countdown"
         },
-		
         {
-            "id": "intro_title", 
-            "name": "Banner First Line", 
+            "id": "text--intro_title",
+            "name": "Banner First Line",
             "type": "text"
         },
         {
-            "id": "intro_subtitle", 
-            "name": "Banner Second Line", 
+            "id": "text--intro_subtitle",
+            "name": "Banner Second Line",
             "type": "text"
         },
         {
-            "id": "horizontalRule",
+            "id": "container--horizontalRule",
             "name": "Horizontal Line",
             "type": "container"
         },
         {
-            "id": "join_us", 
-            "name": "Banner Small Text", 
+            "id": "text--join_us",
+            "name": "Banner Small Text",
             "type": "text"
         },
         {
-            "id": "day", 
-            "name": "Webinar Date", 
+            "id": "text--day",
+            "name": "Webinar Date",
             "type": "text"
         },
         {
-            "id": "dashes",
+            "id": "container--dashes",
             "name": "Webinar Dashes",
             "type": "container"
         },
         {
-            "id": "time", 
-            "name": "Webinar Time", 
+            "id": "text--time",
+            "name": "Webinar Time",
             "type": "text"
         },
         {
-            "id": "description_title", 
-            "name": "Description Header Title", 
+            "id": "text--description_title",
+            "name": "Description Header Title",
             "type": "text"
         },
-        {"id": "description_subtitle", "name": "Description Subheader Title", "type": "text"},
-        {"id": "description_text", "name": "Description Text", "type": "text"},
-        {"id": "testimonial_title", "name": "Testimonial Title", "type": "text"},
-        {"id": "testimonial_1_text", "name": "#1 Testimonial Text", "type": "text"},
-        {"id": "testimonial_1_author", "name": "#1 Testimonial Author", "type": "text"},
-        {"id": "testimonial_2_text", "name": "#2 Testimonial Text", "type": "text"},
-        {"id": "testimonial_2_author", "name": "#2 Testimonial Author", "type": "text"},
-        {"id": "countdown_text", "name": "Countdown Title", "type": "text"},
-        {"id": "cta_title", "name": "Call To Action Title", "type": "text"},
-        {"id": "legal_text", "name": "Legal Text", "type": "text"}
+        {
+            "type": "image-link",
+            "id": "imageLink--imgLink_01",
+            "name": "Image Link #1",
+            "data": {
+                "max-width": 200
+            }
+        },
+        {
+            "type": "image-link",
+            "id": "imageLink--imgLink_02",
+            "name": "Image Link #2",
+            "data": {
+                "max-width": 200
+            }
+        },
+        {
+            "type": "image-link",
+            "id": "imageLink--imgLink_03",
+            "name": "Image Link #3",
+            "data": {
+                "max-width": 200
+            }
+        },
+        {
+            "id": "text--description_subtitle",
+            "name": "Description Subheader Title",
+            "type": "text"
+        },
+        {
+            "id": "text--description_text",
+            "name": "Description Text",
+            "type": "text"
+        },
+        {
+            "id": "text--testimonial_title",
+            "name": "Testimonial Title",
+            "type": "text"
+        },
+        {
+            "id": "text--testimonial_1_text",
+            "name": "#1 Testimonial Text",
+            "type": "text"
+        },
+        {
+            "id": "text--testimonial_1_author",
+            "name": "#1 Testimonial Author",
+            "type": "text"
+        },
+        {
+            "id": "text--testimonial_2_text",
+            "name": "#2 Testimonial Text",
+            "type": "text"
+        },
+        {
+            "id": "text--testimonial_2_author",
+            "name": "#2 Testimonial Author",
+            "type": "text"
+        },
+        {
+            "id": "text--countdown_text",
+            "name": "Countdown Title",
+            "type": "text"
+        },
+        {
+            "id": "text--cta_title",
+            "name": "Call To Action Title",
+            "type": "text"
+        },
+        {
+            "id": "text--cd-days",
+            "name": "Days Text",
+            "type": "text"
+        },
+        {
+            "id": "text--cd-hours",
+            "name": "Hours Text",
+            "type": "text"
+        },
+        {
+            "id": "text--cd-mins",
+            "name": "Mins Text",
+            "type": "text"
+        },
+        {
+            "id": "text--cd-secs",
+            "name": "Secs Text",
+            "type": "text"
+        },
+        {
+            "id": "text--emb_title",
+            "name": "Embed Section Headline",
+            "type": "text"
+        },
+        {
+            "id": "text--imglnk_title",
+            "name": "Image Link / Social Headline",
+            "type": "text"
+        },
+        {
+            "id": "text--fblike_text",
+            "name": "FB Like Text",
+            "type": "text"
+        },
+        {
+            "id": "text--legal_text",
+            "name": "Legal Text",
+            "type": "text"
+        }
     ]
 }

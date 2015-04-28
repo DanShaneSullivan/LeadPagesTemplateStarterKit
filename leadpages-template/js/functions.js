@@ -64,7 +64,7 @@ $(function() {
 
 });
 
-// CUSTOM JQUERY FUNCTIONALITY
+//CUSTOM JQUERY FUNCTIONALITY
 $(function () {
 
     function updatePageForBgImg(){
@@ -92,3 +92,5 @@ $(function () {
 
 
 });
+
+
