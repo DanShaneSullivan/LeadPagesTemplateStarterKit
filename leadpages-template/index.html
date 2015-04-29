@@ -3,7 +3,11 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <title><%= template_name %></title>
+	<style>@import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css');</style>
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700|Roboto:400,300,100,500,700' rel='stylesheet' type='text/css'>
+
     <link rel="stylesheet" href="css/bootstrap.min.css"/>
     <link rel="stylesheet" href="css/style.css">
     <script src="js/html5shiv.js"></script>
@@ -12,1037 +16,241 @@
     <script src="js/functions.js"></script>
 </head>
 <body>
-    <!-- section00 -->
-    <div class="navbar navbar-default" role="navigation" id="s00">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <a href="http://platform.leadpages.net" id="s00-logo"><img src="img/logo.png" alt="" /></a>
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav" id="s00-nav">
-                    <li><a href="#s01" id="s00-nav01">Getting Started</a></li>
-                    <li><a href="#s02" id="s00-nav02">Metadata/Instructions</a></li>
-                    <li><a href="#s03" id="s00-nav03">Styles</a></li>
-                    <li><a href="#s04" id="s00-nav04">Elements</a></li>
-                    <li><a href="#s05" id="s00-nav05">LeadBoxes&trade;</a></li>
-                    <li><a href="#s06" id="s00-nav06">About</a></li>
-                </ul>
-            </div>
-      </div>
-    </div>
-    <!-- /section00 -->
 
-    <!-- s01 -->
-    <div class="content_container" id="s01">
-        <div class="container">
-            <h1 id="s01-h1">Getting Started</h1>
-            <p class="lead" id="s01-lead">The file and folder structure of a LeadPages&trade; template is relatively simple. There are a few gotchas and best-practices worth noting but fundamentally a template is comprised of HTML, CSS, Javascript, and some media assets. Skip to the <a href="#s06">About</a> section to skip right to a sample template.</p>
+<!--Header -->
+<div data-lead-id="container--header-wrapper" id="header_wrapper">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12 text-center">
+				<img data-lead-id="image--logo" id="logo" src="img/logo3.png" alt="Logo">
+			</div>
+		</div>
+	</div>
+</div>
+<!--End Header -->
 
-            <h3 id="s01-h3-01">Template File and Folder Structure</h3>
-            <pre data-lead-id="s01-pre">
-leadpages-template/
-|--- css/
-|    |---- style.css
-|--- fonts
-|    |---- font.eof
-|    |---- font.woff
-|    |---- font.ttf
-|--- img/
-|    |---- image1.jpg
-|    |---- image2.png
-|    |---- image3.gif
-|    |---- ...
-|--- index.html
-|--- js/
-|    |---- functions.js
-|    |---- html5shiv.js
-|    |---- jquery-1.9.1.min.js
-|--- meta/
-|    |---- template.json</pre>
+<!-- Intro Area -->
+<div data-lead-id="container--intro-wrapper" id="intro_wrapper" class="section short text-center">
+	<img data-lead-id="image--intro_bg" id="intro_bg" class="header-bg-img" src="img/intro-bg.jpg" alt="">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12">
+				<h1 data-lead-id="text--intro_title" id="intro_title">Example Marketplace Template</h1>
+				<h2 data-lead-id="text--intro_subtitle" id="intro_subtitle">Based on Modern Webinar</h2>
+			</div>
+		</div>
+	</div>
 
-            <h3 id="s01-h3-02">Recommendations &amp; Notes About Files and Folders</h3>
-            <div id="s01-list-group">
-                <ul class="list-group">
-                    <li class="list-group-item"><strong>Required!</strong> Every template must have a <em>leadpages-template</em> folder at its root.</li>
-                    <li class="list-group-item">Stylesheets must be saved locally and included with the template.</li>
-                    <li class="list-group-item">Images included in the <em>img/</em> directory that are not used within the template will cause errors when the template is uploaded.</li>
-                    <li class="list-group-item"><strong>Required!</strong> <a href="https://code.google.com/p/html5shiv/" target="_blank">HTML5Shiv</a> must be included and linked within <em>index.html</em>.</li>
-                    <li class="list-group-item"><strong>Required!</strong> The <em>meta/</em> directory must exist and contain <a href="#s02"><em>template.json</em></a> and <a href="#s05"><em>form.html</em></a> or the template will fail to upload. <em>form.html</em> can be empty.</li>
-                    <li class="list-group-item"><strong>Required!</strong> <strong>&lt;meta charset=&quot;utf-8&quot; /&gt;</strong> must exist in the <strong>&lt;head/&gt;</strong> of <em>index.html</em>.</li>
-                    <li class="list-group-item"><strong>Best practice!</strong> Use web-optimized images. A tool like <a href="http://www.smushit.com/ysmush.it/" target="_blank">Smush.it</a> can be quite handy.</li>
-                    <li class="list-group-item"><strong>Best practice!</strong> Put common or custom Javascript code in a single file in the <em>js/</em> directory (i.e. <em>js/functions.js</em>).</li>
-                </ul>
-            </div>
-            <div class="totop" id="s01-totop"><a href="#" id="s01-totop-link">Back to Top</a></div>
-        </div>
-    </div>
-    <!-- /s01 -->
+	<div class="container">
+		<div class="row">
+			<div data-lead-id="horizontalRule2" class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 col-lg-6 col-lg-offset-3">
+				<hr data-lead-id="container--hr1" />
+			</div>
+		</div>
+	</div>
 
-    <!-- s02 -->
-    <div class="content_container" id="s02">
-        <div class="container">
-            <h1 id="s02-h1">Metadata/Instructions</h1>
-            <p class="lead" id="s02-lead">
-                The instructions for the LeadPages editor. Herein lies the magic.
-            </p>
+	<div id="date_wrapper" class="section short">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12">
+					<h4 data-lead-id="text--join_us" id="join_us">Join Our Live Webinar</h4>
+					<p id="date">
+						<span data-lead-id="text--day" id="day">Sept 30, 2015</span>
+						<span data-lead-id="container--dashes" class="spacer">//</span>
+						<span data-lead-id="text--time" id="time">3:00pm CST</span>
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<a data-lead-id="link--cta_1_link" id="cta_1_link" class="btn">Sign Me Up</a>
+</div>
+<!--End Intro -->
 
-            <h3 id="s02-h3-01">"meta/template.json" Example</h3>
-            <pre data-lead-id="s02-pre">
-{
-    "id": "HELLO-01",
-    "name": "Hello world",
-    "mobile": true,
-    "notes": "Initial import; first pass.",
-    "syntax": 4,
-    "version": 1.00,
-    "form": {
-        "title": {
-              "css": {
-              },
-              "html": "&lt;h2&gt;Valid html header text goes here&lt;/h2&gt;"
-          },
-          "submit": {
-              "css": {
-                  "valid-css-properties": "valid-css-values-goes-here"
-              },
-              "html": "Button Text Goes Here"
-          },
-          "privacy": {
-              "css": {
-                  "valid-css-properties": "valid-css-values-goes-here"
-              },
-              "html": "Valid html goes here"
-          }
-    },
-    "style": {
-        "replacements": [
-            {
-                "type": "color",
-                "name": "Background Color",
-                "find": "#FFFFFE"
-            }
-        ]
-    },
-    "elements": [
-        {
-            "id": "logo",
-            "name": "Logo",
-            "type": "image"
-        }
-    ],
-    "variables": {}
-}
-}</pre>
-            <h3 id="s02-h3-02">Available Properties</h3>
-            <div class="container-fluid json-props" id="s02-properties">
-                <div class="row content_container" id="s02-property01">
-                    <div class="col-md-2" id="s02-property01-col01">
-                        <div class="prop" id="s02-property01-prop"><strong>id</strong> (string)</div>
-                        <div class="req" id="s02-property01-req"><strong>required</strong></div>
-                    </div>
-                    <div class="col-md-10" id="s02-property01-col02">
-                        <div class="desc" id="s02-property01-desc">A unique identifier for the template.</div>
-                        <div class="example" id="s02-property01-example"><strong>Example(s):</strong> "123456", "LP-1234", "zBxVL", etc.</div>
-                    </div>
-                </div>
-                <div class="row content_container" id="s02-property02">
-                    <div class="col-md-2" id="s02-property02-col01">
-                        <div class="prop" id="s02-property02-prop"><strong>name</strong> (string)</div>
-                        <div class="req" id="s02-property02-req"><strong>required</strong></div>
-                    </div>
-                    <div class="col-md-10" id="s02-property02-col02">
-                        <div class="desc" id="s02-property02-desc">The name of the template. This can be changed within the LeadPages interface, if needed.</div>
-                        <div class="example" id="s02-property02-example"><strong>Example(s):</strong> "Video Squeeze Page", Facebook Promo Page", etc.</div>
-                    </div>
-                </div>
-                <div class="row content_container" id="s02-property03">
-                    <div class="col-md-2" id="s02-property03-col01">
-                        <div class="prop" id="s02-property03-prop"><strong>mobile</strong> (boolean)</div>
-                        <div class="req" id="s02-property03-req"><em>optional</em></div>
-                    </div>
-                    <div class="col-md-10" id="s02-property03-col02">
-                        <div class="desc" id="s02-property03-desc">Is the template mobile responsive?</div>
-                        <div class="example" id="s02-property03-example"><strong>Example(s):</strong> true, false (default)</div>
-                    </div>
-                </div>
-                <div class="row content_container" id="s02-property04">
-                    <div class="col-md-2" id="s02-property04-col01">
-                        <div class="prop" id="s02-property04-prop"><strong>notes</strong> (string)</div>
-                        <div class="req" id="s02-property04-req"><strong>required</strong></div>
-                    </div>
-                    <div class="col-md-10" id="s02-property04-col02">
-                        <div class="desc" id="s02-property04-desc">A brief description of the template or a comment concerning any changes (for updates).</div>
-                        <div class="example" id="s02-property04-example"><strong>Example(s):</strong> "Initial creation!"</div>
-                    </div>
-                </div>
-                <div class="row content_container" id="s02-property05">
-                    <div class="col-md-2" id="s02-property05-col01">
-                        <div class="prop" id="s02-property05-prop"><strong>syntax</strong> (integer)</div>
-                        <div class="req" id="s02-property05-req"><strong>required</strong></div>
-                    </div>
-                    <div class="col-md-10" id="s02-property05-col02">
-                        <div class="desc" id="s02-property05-desc">The syntax for the template. Currently the system only accepts a syntax value of 4.</div>
-                        <div class="example" id="s02-property05-example"><strong>Example(s):</strong> 4</div>
-                    </div>
-                </div>
-                <div class="row content_container" id="s02-property06">
-                    <div class="col-md-2" id="s02-property06-col01">
-                        <div class="prop" id="s02-property06-prop"><strong>version</strong> (float)</div>
-                        <div class="req" id="s02-property06-req"><strong>required</strong></div>
-                    </div>
-                    <div class="col-md-10" id="s02-property06-col02">
-                        <div class="desc" id="s02-property06-desc">The current version number of the template. Each subsequent update to a template must increment the version number in order to upload properly.</div>
-                        <div class="example" id="s02-property06-example"><strong>Example(s):</strong> 1.0, 2.19</div>
-                    </div>
-                </div>
-                <div class="row content_container" id="s02-property07">
-                    <div class="col-md-2" id="s02-property07-col01">
-                        <div class="prop" id="s02-property07-prop"><strong>form</strong> (object)</div>
-                        <div class="req" id="s02-property07-req"><strong>required</strong></div>
-                    </div>
-                    <div class="col-md-10" id="s02-property07-col02">
-                        <div class="desc" id="s02-property07-desc">An array of objects that customize the LeadBox™ appearances. As of syntax 4.0, the form object replaces the /meta/form.html method to customize the LeadBox™. If you still have form.html, you’ll see a <em>Deprecated form.html</em> warning.</div>
-                        <div class="example" id="s02-property07-example"><strong>Example(s):</strong> <a href="#s02">See Meta/Instructions</a></div>
-                    </div>
-                </div>
-                <div class="row content_container" id="s02-property08">
-                    <div class="col-md-2" id="s02-property08-col01">
-                        <div class="prop" id="s02-property08-prop"><strong>elements</strong> (array)</div>
-                        <div class="req" id="s02-property08-req"><strong>required</strong></div>
-                    </div>
-                    <div class="col-md-10" id="s02-property08-col02">
-                        <div class="desc" id="s02-property08-desc">An array of objects that informs the LeadPages editor of elements that are editable. Requires at least one object to upload successfully.</div>
-                        <div class="example" id="s02-property08-example"><strong>Example(s):</strong> See <a href="#s04">each element</a> for more information on the available object properties.</div>
-                    </div>
-                </div>
-                <div class="row content_container" id="s02-property09">
-                    <div class="col-md-2" id="s02-property09-col01">
-                        <div class="prop" id="s02-property09-prop"><strong>style</strong> (object)</div>
-                        <div class="req" id="s02-property09-req"><strong>required</strong></div>
-                    </div>
-                    <div class="col-md-10" id="s02-property09-col02">
-                        <div class="desc" id="s02-property09-desc">An object containing an array of <strong>replacement</strong> objects (read: instructions).</div>
-                        <div class="example" id="s02-property09-example"><strong>Example(s):</strong> See the <a href="#s03">styles</a> section for more information on the available properties of a replacement object.</div>
-                    </div>
-                </div>
-                <div class="row content_container" id="s02-property10">
-                    <div class="col-md-2" id="s02-property10-col01">
-                        <div class="prop" id="s02-property10-prop"><strong>variables</strong> (object)</div>
-                        <div class="req" id="s02-property10-req"><em>optional</em></div>
-                    </div>
-                    <div class="col-md-10" id="s02-property10-col02">
-                        <div class="desc" id="s02-property10-desc">An object that connects an <a href="#s04">element</a> with configuration data and any Javascript methods that might utilize the <strong>leadpages_input_data</strong> object.</div>
-                        <div class="example" id="s02-property10-example"><strong>Example(s):</strong> See the <a href="#ex11">Facebook Share Button</a> for an example.</div>
-                    </div>
-                </div>
-            </div>
-            <div class="totop" id="s02-totop"><a href="#" id="s02-totop-link">Back to Top</a></div>
-        </div>
-    </div>
-    <!-- /s02 -->
+<!--Countdown Timer -->
 
-    <!-- s03 -->
-    <div class="content_container" id="s03">
-        <div class="container">
-            <h1 id="s03-h1">Styles</h1>
-            <p class="lead" id="s03-lead">
-                A breakdown of the tools available for color customization (styles). The "style" property within <em>meta/template.json</em> currently supports only one property - "replacements". The "replacements" property expects an array of objects. Below is an example.
-            </p>
+<div data-lead-id="container--countdown-wrapper" id="countdown_wrapper" class="section">
+	<div class="container text-center">
+		<div class="row">
+			<div class="col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
+				<h4 data-lead-id="text--countdown_text" id="countdown_text">Registration closes in:</h4>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-xs-12">
+				<div data-lead-id="countdown--launch_countdown" id="launch_countdown">
+					<ul class="countdown">
+						<li>
+							<div class="time-wrapper"><span class="days">6</span></div>
+							<p data-lead-id="text--cd-days" class="timeRefDays" id="days-text">Days</p>
+						</li>
+						<li>
+							<div class="time-wrapper">
+								<span class="hours">4</span>
+							</div>
+							<p data-lead-id="text--cd-hours" class="timeRefHours" id="hours-text">Hours</p>
+						</li>
+						<li>
+							<div class="time-wrapper">
+								<span class="minutes">12</span>
+							</div>
+							<p data-lead-id="text--cd-mins" class="timeRefMinutes" id="minutes-text">Minutes</p>
+						</li>
+						<li>
+							<div class="time-wrapper">
+								<span class="seconds">44</span>
+							</div>
+							<p data-lead-id="text--cd-secs" class="timeRefSeconds" id="seconds-text">Seconds</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
 
-            <h3 id="s03-h3-01">"Replacement" Objects</h3>
-            <pre data-lead-id="s03-pre">
-"style": {
-    "replacements": [
-        {
-            "type": "color",
-            "name": "Background Color",
-            "find": "#FFFFFE"
-        }
-    ]
-}
-</pre>
+<!--End Countdown-->
 
-            <h3 id="s03-h3-02">Available Properties</h3>
-            <div class="container-fluid json-props" id="s03-properties">
-                <div class="row content_container" id="s03-property01">
-                    <div class="col-md-2" id="s03-property01-col01">
-                        <div class="prop" id="s03-property01-prop"><strong>type</strong> (string)</div>
-                        <div class="req" id="s03-property01-req"><strong>required</strong></div>
-                    </div>
-                    <div class="col-md-10" id="s03-property01-col02">
-                        <div class="desc" id="s03-property01-desc">The type of style component to render in the editor.</div>
-                        <div class="example" id="s03-property01-example"><strong>Example(s):</strong> "Color" or "Font".</div>
-                    </div>
-                </div>
-                <div class="row content_container" id="s03-property02">
-                    <div class="col-md-2" id="s03-property02-col01">
-                        <div class="prop" id="s03-property02-prop"><strong>name</strong> (string)</div>
-                        <div class="req" id="s03-property02-req"><strong>required</strong></div>
-                    </div>
-                    <div class="col-md-10" id="s03-property02-col02">
-                        <div class="desc" id="s03-property02-desc">The label of the style to change under the "Styles" section of the editor.</div>
-                        <div class="example" id="s03-property02-example"><strong>Example(s):</strong> "Background Color", "Main Font Color", "Link Color".</div>
-                    </div>
-                </div>
-                <div class="row content_container" id="s03-property03">
-                    <div class="col-md-2" id="s03-property03-col01">
-                        <div class="prop" id="s03-property03-prop"><strong>find</strong> (string)</div>
-                        <div class="req" id="s03-property03-req"><strong>required</strong></div>
-                    </div>
-                    <div class="col-md-10" id="s03-property03-col02">
-                        <div class="desc" id="s03-property03-desc">The value to "find" and subsequently replace. <strong>Note</strong>, because this operation is a find/replace, using a common color in <em>css/style.css</em> for many items will result in a larger-than-expected replacement.</div>
-                        <div class="example" id="s03-property03-example"><strong>Example(s):</strong> Setting "find" to <em>"#CCCCCC"</em> will change anything using that color, regardless of the cosmetic intent. It's strongly recommended to use slight variations for more granular control (i.e. <em>"#CCCCCD"</em>, <em>"#CCCCCB"</em>, etc.).</div>
-                    </div>
-                </div>
-            </div>
-            <div class="totop" id="s03-totop"><a href="#" id="s03-totop-link">Back to Top</a></div>
-        </div>
-    </div>
-    <!-- /s03 -->
+<!--Description -->
+<div data-lead-id="container--description-wrapper" id="description_wrapper" class="section">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12 col-sm-7">
+				<div data-lead-id="video--description-video" id="embed_media">
+					<iframe width="750" height="422" src="https://www.youtube.com/embed/5i-VYe7EI2g?list=UUJ8GHC6QaHBUk2TfDxtuYUg" frameborder="0" allowfullscreen></iframe>
+				</div>
+			</div>
+			<div class="col-xs-12 col-sm-5">
+				<h2 data-lead-id="text--description_title" id="description_title">Featured Guest</h2>
+				<h3 data-lead-id="text--description_subtitle" id="description_subtitle">John Doe, SEO Expert</h3>
+				<p data-lead-id="text--description_text" id="description_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec faucibus orci orci, id maximus ipsum bibendum et. Pellentesque et tellus odio. Proin nec ipsum feugiat, viverra leo eleifend, facilisis nisl. Etiam in nulla vel lacus dapibus volutpat eleifend et dui.<br /><br />
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec faucibus orci orci, id maximus.</p>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- End Description -->
 
-   <!-- s04 -->
-    <div class="content_container" id="s04">
-        <div class="container">
-            <h1 id="s04-h1">Elements</h1>
-            <!-- element examples -->
-            <div class="container-fluid">
-                <!-- ex01 -->
-                <div class="row content_container" id="ex01">
-                    <h3 id="ex01-h3">Containers</h3>
-                    <div class="col-md-4" id="ex01-col01">
-                        <p id="ex01-lead">Containers are elements within a template that can be hidden. Technically speaking any element in a template that can be edited, can be hidden. The "container" type (<em>meta/template.json</em>) is for elements that only need this feature.</p>
-                        <div id="ex01-container" class="well">Container</div>
-                    </div>
-                    <div class="col-md-8" id="ex01-col02">
-                        <div class="panel panel-info" id="ex01-panel01">
-                            <div class="panel-heading" id="ex01-panel01-head">index.html snippet</div>
-                            <div class="panel-body" id="ex01-panel01-body">
-                                <pre data-lead-id="ex01-pre01">&lt;div data-lead-id=&quot;ex01-container&quot;&gt;...&lt;/div&gt;</pre>
-                            </div>
-                        </div>
-                        <div class="panel panel-info" id="ex01-panel02">
-                            <div class="panel-heading" id="ex01-panel02-head">meta/template.json snippet</div>
-                            <div class="panel-body" id="ex01-panel02-body">
-<pre data-lead-id="ex01-pre02">
-"elements": [{
-    "id": "ex01-container",
-    "name": "Container",
-    "type": "container"
-}]</pre>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- /ex01 -->
+<!-- Testimonial -->
+<div data-lead-id="container--testimonial-wrapper" id="testimonial_wrapper" class="section">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12 text-center">
+				<h4 data-lead-id="text--testimonial_title" id="testimonial_title">What people are saying...</h4>
+			</div>
+		</div>
+		<div id="testimonial_1" class="row testimonial">
+			<div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3">
+				<div><p data-lead-id="text--testimonial_1_text" id="testimonial_1_text" class="testimonial-text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec faucibus orci orci, id maximus ipsum bibendum et."</p>
+				<p data-lead-id="text--testimonial_1_author" id="testimonial_1_author" class="testimonial-author">- Jane Smith</p></div>
+			</div>
+		</div>
+		<div id="testimonial_2" class="row testimonial">
+			<div class="col-xs-12 col-sm-10 col-sm-offset-1 col-md-8 col-md-offset-2 col-lg-6 col-lg-offset-3">
+				<div><p data-lead-id="text--testimonial_2_text" id="testimonial_2_text" class="testimonial-text">"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec faucibus orci orci, id maximus ipsum bibendum et."</p>
+				<p data-lead-id="text--testimonial_2_author" id="testimonial_2_author" class="testimonial-author">- Jane Smith</p></div>
+			</div>
+		</div>
+	</div>
+</div>
+<!--End Testimonial -->
 
-                <!-- ex02 -->
-                <div class="row content_container" id="ex02">
-                    <h3 id="ex02-h3">Text</h3>
-                    <div class="col-md-4" id="ex02-col01">
-                        <p id="ex02-lead">The "text" type (<em>meta/template.json</em>) designates the enclosed text as editable. A limited number of formatting options are available for the enclosed text (i.e. <strong>bold</strong>, <em>italic</em>, <u>underlined</u>, <span style="color: #008000;">foreground</span> and <span style="background-color: #FFFFE0">background</span> colors, <a href="http://example.com" target="_blank">links</a>, and the <span style="font-family:julius sans one;">font</span>.)</p>
-                    </div>
-                    <div class="col-md-8" id="ex02-col02">
-                        <div class="panel panel-info" id="ex02-panel01">
-                            <div class="panel-heading" id="ex02-panel01-head">index.html snippet</div>
-                            <div class="panel-body" id="ex02-panel01-body">
-                                <pre data-lead-id="ex02-pre01">&lt;p data-lead-id=&quot;s01-lead&quot;&gt;...&lt;/p&gt;</pre>
-                            </div>
-                        </div>
-                        <div class="panel panel-info" id="ex02-panel02">
-                            <div class="panel-heading" id="ex02-panel02-head">meta/template.json snippet</div>
-                            <div class="panel-body" id="ex02-panel02-body">
-<pre data-lead-id="ex02-pre02">
-"elements": [{
-    "id": "ex02-lead",
-    "name": "Lead",
-    "type": "text"
-}]</pre>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- /ex02 -->
+<!--Image Links and Facebook -->
+<div data-lead-id="container--imglnk-wrapper" id="imglnk_wrapper" class="section">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12 text-center">
+				<h3 data-lead-id="text--imglnk_title" id="imglnk_title">VISIT OUR SPONSORS</h3>
+				<a href="https://leadpages.net" data-lead-id="image-link--imgLink_01">
+				<img src="img/lp2.png">
+				</a>
+				<a href="https://leadpages.net" data-lead-id="image-link--imgLink_02">
+				<img src="img/lp2.png">
+				</a>
+				<a href="https://leadpages.net" data-lead-id="image-link--imgLink_03">
+				<img src="img/lp2.png">
+				</a>
+				<hr data-lead-id="container--hr2" id="soc_hr" style="background-color:#000000; height: .15em; width: 50%" />
+				<h3 data-lead-id="text--fblike_text" id="fblike_text">Like & Share</h3>
+				<div data-lead-id="facebook-button--fblike">
+					<img src="img/fb_like.png" alt="">
+				</div>
+				<div>
+					<a href="" data-lead-id="dynamic--fbshare" >
+					<img src="img/fb_share.png" alt="">
+					</a>
+				</div>
+			</div>
 
-                <!-- ex03 -->
-                <div class="row content_container" id="ex03">
-                    <h3 id="ex03-h3">Images</h3>
-                    <div class="col-md-4" id="ex03-col01">
-                        <p id="ex03-lead">The "image" type (<em>meta/template.json</em>) designates an image as swappable. The "max-width" property will provide advice when choosing an image but will not actually constrain the image dimensions. That behavior is best handled in the stylesheets.</p>
-                        <img src="img/340x120.png" id="ex03-image" alt="" class="thumbnail img-responsive" />
-                    </div>
-                    <div class="col-md-8" id="ex03-col02">
-                        <div class="panel panel-info" id="ex03-panel01">
-                            <div class="panel-heading" id="ex03-panel01-head">index.html snippet</div>
-                            <div class="panel-body" id="ex03-panel01-body">
-                                <pre data-lead-id="ex03-pre01">&lt;img src=&quot;img/340x120.png&quot; data-lead-id=&quot;ex03-image&quot; alt=&quot;&quot; class=&quot;thumbnail&quot; /&gt;</pre>
-                            </div>
-                        </div>
-                        <div class="panel panel-info" id="ex03-panel02">
-                            <div class="panel-heading" id="ex03-panel02-head">meta/template.json snippet</div>
-                            <div class="panel-body" id="ex03-panel02-body">
-<pre data-lead-id="ex03-pre02">
-"elements": [{
-    "id": "ex03-image",
-    "name": "Example Image",
-    "type": "image",
-    "comment": "Choose an example.",
-    "data": {
-        "max-width": 340
-    }
-}]</pre>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- /example3 -->
+		</div>
 
-                <!-- ex04 -->
-                <div class="row content_container" id="ex04" >
-                    <h3 id="ex04-h3">Background Images</h3>
-                    <div class="col-md-4" id="ex04-col01">
-                        <p id="ex04-lead">The "background-image" type (<em>meta/template.json</em>) is identical to the "image" type, minus the hover effect in the template editor. This subtle difference is very important for templates that utilize large images under other HTML elements. This is a hack using <em>position: absolute/fixed;</em> to position the image within a parent container with <em>position:relative</em>. We currently DO NOT support css background image.</p>
-                    </div>
-                    <div class="col-md-8" id="ex04-col02">
-                        <div class="panel panel-info" id="ex04-panel01">
-                            <div class="panel-heading" id="ex04-panel01-head">index.html snippet</div>
-                            <div class="panel-body" id="ex04-panel01-body">
-                                <pre data-lead-id="ex04-pre01">&lt;div data-lead-id=&quot;ex04-background-image&quot;&gt;...&lt;/div&gt;</pre>
-                            </div>
-                        </div>
-                        <div class="panel panel-info" id="ex04-panel02">
-                            <div class="panel-heading" id="ex04-panel02-head">meta/template.json snippet</div>
-                            <div class="panel-body" id="ex04-panel02-body">
-<pre data-lead-id="ex04-pre02">
-"elements": [{
-    "id": "ex04-background-image",
-    "name": "Example 04 Bakground Image",
-    "type": "background-image",
-    "comment": "Choose a background image.",
-    "data": {
-        "max-width": 1140,
-        "max-height": 500
-    }
-}]</pre>
-                            </div>
-                        </div>
-                    </div>
-                    <img src="img/1140x500.png" alt="" id="ex04-background-image"  />
-                </div>
-                <!-- /ex04 -->
+	</div>
+</div>
+<!--End Image Links and Facebook-->
 
-                <!-- ex05 -->
-                <div class="row content_container" id="ex05">
-                    <h3 id="ex05-h3">Videos</h3>
-                    <div class="col-md-4" id="ex05-col01">
-                        <p id="ex05-lead">The "video" type (<em>meta/template.json</em>) specifies a container within which the editor can embed a video. The editor will insert a placeholder during editing but including a mock image will help during the editing phase, prior to upload.</p>
-                        <div id="ex05-video">
-                            <img src="img/340x191.png" width="340" height="191" alt="" />
-                        </div>
-                    </div>
-                    <div class="col-md-8" id="ex05-col02">
-                        <div class="panel panel-info" id="ex05-panel01">
-                            <div class="panel-heading" id="ex05-panel01-head">index.html snippet</div>
-                            <div class="panel-body" id="ex05-panel01-body">
-                                <pre data-lead-id="ex05-pre01">&lt;div data-lead-id=&quot;ex05-video&quot;&gt;...&lt;/div&gt;</pre>
-                            </div>
-                        </div>
-                        <div class="panel panel-info" id="ex05-panel02">
-                            <div class="panel-heading" id="ex05-panel02-head">meta/template.json snippet</div>
-                            <div class="panel-body" id="ex05-panel02-body">
-<pre data-lead-id="ex05-pre02">
-"elements": [{
-    "type": "video",
-    "id": "ex05-video",
-    "name": "Example 05 Video"
-}]</pre>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- /ex05 -->
+<!--Added Section 2 EMBED-->
+<div data-lead-id="container--embed-wrapper" id="embed_wrapper" class="section">
+	<div class="container text-center">
+		<div class="row">
+			<div class="col-xs-12 col-md-10 col-md-offset-1 col-lg-8 col-lg-offset-2">
+				<h4 data-lead-id="text--emb_title" id="emb_title">Check Out This Audio Sample!</h4>
+				<div data-lead-id="embed--embed_01" id="embed_01" class="row">
+					<iframe width="100%" height="166" scrolling="no" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/168946410&amp;color=ff5500&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false"></iframe>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- End Section 2 EMBED -->
 
-                <!-- ex06 -->
-                <div class="row content_container" id="ex06">
-                    <h3 id="ex06-h3">Text Links</h3>
-                    <div class="col-md-4" id="ex06-col01">
-                        <p id="ex06-lead">The "link" type (<em>meta/template.json</em>) designates a hyperlink that can be edited. The "text" type should be used when links are amongst a larger body of text.</p>
-                        <p><a href="http://example.com" id="ex06-link">Example</a></p>
-                    </div>
-                    <div class="col-md-8" id="ex06-col02">
-                        <div class="panel panel-info" id="ex06-panel01">
-                            <div class="panel-heading" id="ex06-panel01-head">index.html snippet</div>
-                            <div class="panel-body" id="ex06-panel01-body">
-                                <pre data-lead-id="ex06-pre01">&lt;a href=&quot;http://example.com&quot; data-lead-id=&quot;ex06-link&quot;&gt;Example&lt;/a&gt;</pre>
-                            </div>
-                        </div>
-                        <div class="panel panel-info" id="ex06-panel02">
-                            <div class="panel-heading" id="ex06-panel02-head">meta/template.json snippet</div>
-                            <div class="panel-body" id="ex06-panel02-body">
-<pre data-lead-id="ex06-pre02">
-"elements": [{
-    "type": "link",
-    "id": "ex06-link",
-    "name": "Example 6 Link"
-}]</pre>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- /ex06 -->
+<!--Final CTA -->
+<div data-lead-id="container--cta-wrapper" id="cta_wrapper" class="section">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12 text-center">
+				<h2 data-lead-id="text--cta_title" id="cta_title">Don't miss this exclusive training</h2>
+				<a data-lead-id="link--cta_2_link" id="cta_2_link" class="btn">Sign Me Up</a>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- END CTA -->
 
-                <!-- ex07 -->
-                <div class="row content_container" id="ex07">
-                    <h3 id="ex07-h3">Image Links</h3>
-                    <div class="col-md-4" id="ex07-col01">
-                        <p id="ex07-lead">The "image-link" type (<em>meta/template.json</em>) is a mash-up of the "image" and the "link" types. It allows image swapping and assigning a destination URL.</p>
-                        <p><a href="http://example.com" id="ex07-image-link"><img src="img/340x120.png" alt="" class="thumbnail img-responsive" /></a></p>
-                    </div>
-                    <div class="col-md-8" id="ex07-col02">
-                        <div class="panel panel-info" id="ex07-panel01">
-                            <div class="panel-heading" id="ex07-panel01-head">index.html snippet</div>
-                            <div class="panel-body" id="ex07-panel01-body">
-                                <pre data-lead-id="ex07-pre01">&lt;a href=&quot;http://example.com&quot; data-lead-id=&quot;ex07-image-link&quot;&gt;&lt;img src=&quot;img/340x120.png&quot; alt=&quot;&quot; class=&quot;thumbnail&quot; /&gt;&lt;/a&gt;</pre>
-                            </div>
-                        </div>
-                        <div class="panel panel-info" id="ex07-panel02">
-                            <div class="panel-heading" id="ex07-panel02-head">meta/template.json snippet</div>
-                            <div class="panel-body" id="ex07-panel02-body">
-<pre data-lead-id="ex07-pre02">
-"elements": [{
-    "type": "image-link",
-    "id": "ex07-image-link",
-    "name": "Example 7 Image Link",
-    "data": {
-        "max-width": 340
-    }
-}]</pre>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- /ex07 -->
+<!-- FOOTER -->
+<div data-lead-id="container--footer-wrapper" id="footer_wrapper">
+	<div class="container">
+		<div class="row">
+			<div class="col-xs-12 col-sm-6 col-sm-push-3 text-center">
+				<p data-lead-id="text--legal_text" id="legal_text">&copy; Copyright. All Rights Reserved. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam bibendum risus at sapien scelerisque maximus.</p>
+				<ul data-lead-id="container--social-media" id="social_media" class="social-icons">
+					<li data-lead-id="container--social-facebook" id="social_facebook">
+						<i class="fa fa-facebook"></i>
+						<a data-lead-id="link--facebook_link" id="facebook_link" href="https://www.facebook.com/"></a>
+					</li>
+					<li data-lead-id="container--social-twitter" id="social_twitter">
+						<i class="fa fa-twitter"></i>
+						<a data-lead-id="link--twitter_link" id="twitter_link" href="https://www.twitter.com/"></a>
+					</li>
+					<li data-lead-id="container--social-google" id="social_google">
+						<i class="fa fa-google-plus"></i>
+						<a data-lead-id="link--google_link" id="google_link" href="https://plus.google.com/"></a>
+					</li>
+					<li data-lead-id="container--social-linkedin" id="social_linkedin">
+						<i class="fa fa-linkedin"></i>
+						<a id="linkedin_link" href="https://www.linkedin.com/"></a>
+					</li>
+				</ul>
+				<div id="footer_links">
+					<a data-lead-id="link--footer_link_1" id="footer_link_1">Privacy Policy</a>
+					<a data-lead-id="link--footer_link_2" id="footer_link_2">Legal Link</a>
+					<a data-lead-id="link--footer_link_3" id="footer_link_3">Extra Link</a>
+					<a data-lead-id="link--footer_link_4" id="footer_link_4">Extra Link</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- END FOOTER -->
 
-                <!-- ex08 -->
-                <div class="row content_container" id="ex08">
-                    <h3 id="ex08-h3">Embed</h3>
-                    <div class="col-md-4" id="ex08-col01">
-                        <p id="ex08-lead">The "embed" type (<em>meta/template.json</em>) designates a container that can house embeddable content such as a Twitter widget, a Chatroll, SoundCloud track, or more.</p>
-                        <div id="ex08-embed" class="well">Embed Something Here like http://tlk.io/</div>
-                    </div>
-                    <div class="col-md-8" id="ex08-col02">
-                        <div class="panel panel-info" id="ex08-panel01">
-                            <div class="panel-heading" id="ex08-panel01-head">index.html snippet</div>
-                            <div class="panel-body" id="ex08-panel01-body">
-                                <pre data-lead-id="ex08-pre01">&lt;div data-lead-id=&quot;ex08-embed&quot; class=&quot;well&quot;&gt;Embed Something Here like http://tlk.io/&lt;/div&gt;</pre>
-                            </div>
-                        </div>
-                        <div class="panel panel-info" id="ex08-panel02">
-                            <div class="panel-heading" id="ex08-panel02-head">meta/template.json snippet</div>
-                            <div class="panel-body" id="ex08-panel02-body">
-<pre data-lead-id="ex08-pre02">
-"elements": [{
-    "type": "embed",
-    "id": "ex08-embed",
-    "name": "Example 8 Embed"
-}]</pre>
-                            </div>
-                        </div>
-                        <div class="panel panel-info" id="ex08-panel03">
-                            <div class="panel-heading" id="ex08-panel03-head">example embed snippet</div>
-                            <div class="panel-body" id="ex08-panel03-body">
-                                <pre data-lead-id="ex08-pre03">&lt;iframe width=&quot;100%&quot; height=&quot;450&quot; scrolling=&quot;no&quot; frameborder=&quot;no&quot; src=&quot;https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/139058424&amp;amp;auto_play=false&amp;amp;hide_related=false&amp;amp;show_comments=true&amp;amp;show_user=true&amp;amp;show_reposts=false&amp;amp;visual=true&quot;&gt;&lt;/iframe&gt;</pre>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- /ex08 -->
-
-                <!-- ex09 -->
-                <div class="row content_container" id="ex09">
-                    <h3 id="ex09-h3">Countdown Timer</h3>
-                    <div class="col-md-4" id="ex09-col01">
-                        <p id="ex09-lead">The "countdown" type (<em>meta/template.json</em>) can be used to update sub-elements with the days, hours, minutes, or seconds remaining from now until a chosen date. The "days", "hours", "minutes", and "seconds" classes, are required. Without them the countdown timer will not function properly.</p>
-                        <div id="ex09-countdown">
-                            <ul class="countdown">
-                                <li>
-                                    <div class="flap"><span class="days">6</span></div>
-                                    <p class="timeRefDays" id="days-text">Days</p>
-                                </li>
-                                <li>
-                                    <div class="flap">
-                                        <span class="hours">4</span>
-                                    </div>
-                                    <p class="timeRefHours" id="hours-text">Hours</p>
-                                </li>
-                                <li>
-                                    <div class="flap">
-                                        <span class="minutes">12</span>
-                                    </div>
-                                    <p class="timeRefMinutes" id="minutes-text">Minutes</p>
-                                </li>
-                                <li>
-                                    <div class="flap">
-                                        <span class="seconds">44</span>
-                                    </div>
-                                    <p class="timeRefSeconds" id="seconds-text">Seconds</p>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-md-8" id="ex09-col02">
-                        <div class="panel panel-info" id="ex09-panel01">
-                            <div class="panel-heading" id="ex09-panel01-head">index.html snippet</div>
-                            <div class="panel-body" id="ex09-panel01-body">
-<pre data-lead-id="ex09-pre01">&lt;div data-lead-id=&quot;ex09-countdown&quot;&gt;
-    &lt;ul class=&quot;countdown&quot;&gt;
-        &lt;li&gt;
-            &lt;div class=&quot;flap&quot;&gt;&lt;span class=&quot;days&quot;&gt;6&lt;/span&gt;&lt;/div&gt;
-            &lt;p class=&quot;timeRefDays&quot; data-lead-id=&quot;days-text&quot;&gt;Days&lt;/p&gt;
-        &lt;/li&gt;
-        &lt;li&gt;
-            &lt;div class=&quot;flap&quot;&gt;
-                &lt;span class=&quot;hours&quot;&gt;4&lt;/span&gt;
-            &lt;/div&gt;
-            &lt;p class=&quot;timeRefHours&quot; data-lead-id=&quot;hours-text&quot;&gt;Hours&lt;/p&gt;
-        &lt;/li&gt;
-        &lt;li&gt;
-            &lt;div class=&quot;flap&quot;&gt;
-                &lt;span class=&quot;minutes&quot;&gt;12&lt;/span&gt;
-            &lt;/div&gt;
-            &lt;p class=&quot;timeRefMinutes&quot; data-lead-id=&quot;minutes-text&quot;&gt;Minutes&lt;/p&gt;
-        &lt;/li&gt;
-        &lt;li&gt;
-            &lt;div class=&quot;flap&quot;&gt;
-                &lt;span class=&quot;seconds&quot;&gt;44&lt;/span&gt;
-            &lt;/div&gt;
-            &lt;p class=&quot;timeRefSeconds&quot; data-lead-id=&quot;seconds-text&quot;&gt;Seconds&lt;/p&gt;
-        &lt;/li&gt;
-    &lt;/ul&gt;
-&lt;/div&gt;</pre>
-                            </div>
-                        </div>
-                        <div class="panel panel-info" id="ex09-panel02">
-                            <div class="panel-heading" id="ex09-panel02-head">meta/template.json snippet</div>
-                            <div class="panel-body" id="ex09-panel02-body">
-<pre data-lead-id="ex09-pre02">
-"elements": [{
-    "type": "countdown",
-    "id": "ex09-countdown",
-    "name": "Example 9 Countdown"
-}]</pre>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- /ex09 -->
-
-                <!-- ex10 -->
-                <div class="row content_container" id="ex10">
-                    <h3 id="ex10-h3">Facebook "Like" Button</h3>
-                    <div class="col-md-4" id="ex10-col01">
-                        <p id="ex10-lead">The "facebook-button" type (<em>meta/template.json</em>) can transform the contents of <strong>&lt;div/&gt;</strong> into a Facebook "Like" button.</p>
-                        <div id="ex10-facebook-button" class="p">
-                            <img src="img/fb-blue-100.png" alt="" />
-                        </div>
-                    </div>
-                    <div class="col-md-8" id="ex10-col02">
-                        <div class="panel panel-info" id="ex10-panel01">
-                            <div class="panel-heading" id="ex10-panel01-head">index.html snippet</div>
-                            <div class="panel-body" id="ex10-panel01-body">
-                                <pre data-lead-id="ex10-pre01">
-&lt;div data-lead-id=&quot;ex10-facebook-button&quot;&gt;
-    &lt;img src=&quot;img/fb-blue-100.png&quot; alt=&quot;&quot; /&gt;
-&lt;/div&gt;</pre>
-                            </div>
-                        </div>
-                        <div class="panel panel-info" id="ex10-panel02">
-                            <div class="panel-heading" id="ex10-panel02-head">meta/template.json snippet</div>
-                            <div class="panel-body" id="ex10-panel02-body">
-<pre data-lead-id="ex10-pre02">
-"elements": [{
-    "type": "facebook-button",
-    "id": "ex10-facebook-button",
-    "name": "Example 10: Facebook Like Button"
-}]</pre>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- /ex10 -->
-
-                <!-- ex11 -->
-                <div class="row content_container" id="ex11">
-                    <h3 id="ex11-h3">Facebook Share Button</h3>
-                    <div class="col-md-4" id="ex11-col01">
-                        <p id="ex11-lead">The "dynamic" type (<em>meta/template.json</em>) can be used to transform an image link into a Facebook share button. An additional variable needs to be added to <em>meta/template.json</em> in order for the "dynamic" control to know where to pull data from. This data, updated within the editor, is ultimately passed to <em>js/functions.json</em> for use, say in a little popup window.</p>
-                        <div class="p">
-                            <a href="" id="ex11-dynamic" class="pop-facebook">
-                                <img src="img/fb-blue-100.png" alt="" />
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-md-8" id="ex11-col02">
-                        <div class="panel panel-info" id="ex11-panel01">
-                            <div class="panel-heading" id="ex11-panel01-head">index.html snippet</div>
-                            <div class="panel-body" id="ex11-panel01-body">
-                                <pre data-lead-id="ex11-pre01">
-&lt;a href=&quot;&quot; data-lead-id=&quot;ex11-dynamic&quot; class=&quot;pop-facebook&quot;&gt;
-    &lt;img src=&quot;img/fb-blue-100.png&quot; alt=&quot;&quot; /&gt;
-&lt;/a&gt;</pre>
-                            </div>
-                        </div>
-                        <div class="panel panel-info" id="ex11-panel02">
-                            <div class="panel-heading" id="ex11-panel02-head">meta/template.json snippet</div>
-                            <div class="panel-body" id="ex11-panel02-body">
-<pre data-lead-id="ex11-pre02">
-"elements": [{
-    "type": "dynamic",
-    "id": "ex11-dynamic",
-    "name": "Example 11: Facebook Share Button",
-    "data": {
-        "variables": ["facebookurl"]
-    }
-},
-"variables": {
-    "facebookurl": {
-        "variable": "facebookurl",
-        "dafault": "",
-        "name": "The URL to share on Facebook. Leave blank to share the current page."
-    }
-}]</pre>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- /ex11 -->
-
-                <!-- ex12 -->
-                <div class="row content_container" id="ex12">
-                    <h3 id="ex12-h3">Facebook Comments</h3>
-                    <div class="col-md-4" id="ex12-col01">
-                        <p id="ex12-lead">The "link" type (<em>meta/template.json</em>) designates a hyperlink that can be edited. The "text" type should be used when links are amongst a larger body of text.</p>
-
-                        <div class="facebook-comments">
-                            <div id="ex12-facebook-comments" class="well">Facebook Comments Here</div>
-                        </div>
-                    </div>
-                    <div class="col-md-8" id="ex12-col02">
-                        <div class="panel panel-info" id="ex12-panel01">
-                            <div class="panel-heading" id="ex12-panel01-head">index.html snippet</div>
-                            <div class="panel-body" id="ex12-panel01-body">
-                                <pre data-lead-id="ex12-pre01">&lt;div data-lead-id=&quot;ex12-facebook-comments&quot; class=&quot;well&quot;&gt;Facebook Comments Here&lt;/div&gt;</pre>
-                            </div>
-                        </div>
-                        <div class="panel panel-info" id="ex12-panel02">
-                            <div class="panel-heading" id="ex12-panel02-head">meta/template.json snippet</div>
-                            <div class="panel-body" id="ex12-panel02-body">
-<pre data-lead-id="ex12-pre02">"elements": [{
-    "type": "facebook-comments",
-    "id": "ex12-facebook-comments",
-    "name": "Ex.12: Facebook Comments"
-}]</pre>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- /ex12 -->
-
-                <!-- ex13 -->
-                <div class="row content_container" id="ex13">
-                    <h3 id="ex13-h3">Twitter "Tweet" Button</h3>
-                    <div class="col-md-4" id="ex13-col01">
-                        <p id="ex13-lead">The "twitter-button" type (<em>meta/template.json</em>) can transform the contents of <strong>&lt;div/&gt;</strong> into a Twitter "Tweet" button.</p>
-                        <div id="ex13-twitter-button" class="p">
-                            <img src="img/twitter-100.png" alt="" />
-                        </div>
-                    </div>
-                    <div class="col-md-8" id="ex13-col02">
-                        <div class="panel panel-info" id="ex13-panel01">
-                            <div class="panel-heading" id="ex13-panel01-head">index.html snippet</div>
-                            <div class="panel-body" id="ex13-panel01-body">
-                                <pre data-lead-id="ex13-pre01">
-&lt;div data-lead-id=&quot;ex13-twitter-button&quot;&gt;
-    &lt;img src=&quot;img/twitter-100.png&quot; alt=&quot;&quot; /&gt;
-&lt;/div&gt;</pre>
-                            </div>
-                        </div>
-                        <div class="panel panel-info" id="ex13-panel02">
-                            <div class="panel-heading" id="ex13-panel02-head">meta/template.json snippet</div>
-                            <div class="panel-body" id="ex13-panel02-body">
-<pre data-lead-id="ex13-pre02">
-"elements": [{
-    "type": "twitter-button",
-    "id": "ex13-twitter-button",
-    "name": "Example 13: Twitter Tweet Button"
-}]</pre>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- /ex13 -->
-
-                <!-- ex14 -->
-                <div class="row content_container" id="ex14">
-                    <h3 id="ex14-h3">Google "g+1" Button</h3>
-                    <div class="col-md-4" id="ex14-col01">
-                        <p id="ex14-lead">The "google-button" type (<em>meta/template.json</em>) can transform the contents of <strong>&lt;div/&gt;</strong> into a Google "g+1" button.</p>
-                        <div id="ex14-google-button" class="p">
-                            <img src="img/google-100.png" alt="" />
-                        </div>
-                    </div>
-                    <div class="col-md-8" id="ex14-col02">
-                        <div class="panel panel-info" id="ex14-panel01">
-                            <div class="panel-heading" id="ex14-panel01-head">index.html snippet</div>
-                            <div class="panel-body" id="ex14-panel01-body">
-                                <pre data-lead-id="ex114-pre01">
-&lt;div data-lead-id=&quot;ex14-google-button&quot;&gt;
-    &lt;img src=&quot;img/google-100.png&quot; alt=&quot;&quot; /&gt;
-&lt;/div&gt;</pre>
-                            </div>
-                        </div>
-                        <div class="panel panel-info" id="ex14-panel02">
-                            <div class="panel-heading" id="ex14-panel02-head">meta/template.json snippet</div>
-                            <div class="panel-body" id="ex14-panel02-body">
-<pre data-lead-id="ex14-pre02">
-"elements": [{
-    "type": "google-button",
-    "id": "ex14-google-button",
-    "name": "Example 14: Google g+1 Button"
-}]</pre>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- /ex14 -->
-
-                <!-- ex15 -->
-                <div class="row content_container" id="ex15">
-                    <h3 id="ex15-h3">LeadBoxes&trade;</h3>
-                    <div class="col-md-4" id="ex15-col01">
-                        <p id="ex15-lead">The "link" and "image-link" types (<em>meta/template.json</em>) can be pre-configured to trigger an opt-in form with one simple change. The addition of the "#/optin" value for the <em>data.href</em> property will default a "link" or "image-link" element to use the opt-in form instead of a anchor link. The default look-and-feel of an opt-in form can be further configured within the <strong><a href="#s05">"meta/form.html"</a></strong> file.</p>
-                        <p><a class="btn btn-warning btn-lg" id="ex15-link">Opt-in Button</a></p>
-                        <p><a id="ex15-image-link"><img src="img/240x180.png" alt="" /></a></p>
-                    </div>
-                    <div class="col-md-8" id="ex15-col02">
-                        <div class="panel panel-info" id="ex15-panel01">
-                            <div class="panel-heading" id="ex15-panel01-head">index.html snippet</div>
-                            <div class="panel-body" id="ex15-panel01-body01">
-                                <pre data-lead-id="ex15-pre01">&lt;a class=&quot;btn btn-warning btn-lg&quot; data-lead-id=&quot;ex15-link&quot;&gt;Opt-in Button&lt;/a&gt;</pre>
-                            </div>
-                            <div class="panel-body" id="ex15-panel01-body02">
-                                <pre data-lead-id="ex15-pre02">&lt;a data-lead-id=&quot;ex15-image-link&quot;&gt;&lt;img src=&quot;img/240x180.png&quot; alt=&quot;&quot; class=&quot;thumbnail&quot; /&gt;&lt;/a&gt;</pre>
-                            </div>
-                        </div>
-                        <div class="panel panel-info" id="ex15-panel02">
-                            <div class="panel-heading" id="ex15-panel02-head">meta/template.json snippet</div>
-                            <div class="panel-body" id="ex15-panel02-body01">
-<pre data-lead-id="ex15-pre03">
-"elements": [{
-    "type": "link",
-    "id": "ex15-link",
-    "name": "Ex.15: Opt-in Link",
-    "data": {
-        "href": "#/optin"
-    }
-}]</pre>
-                            </div>
-                            <div class="panel-body" id="ex15-panel02-body02">
-<pre data-lead-id="ex15-pre04">
-"elements": [{
-    "type": "image-link",
-    "id": "ex15-image-link",
-    "name": "Ex.15: Opt-in Image Link",
-    "data": {
-        "max-width": 240,
-        "href": "#/optin"
-    }
-}]</pre>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- /ex15 -->
-
-                <!-- ex16 -->
-                <div class="row content_container" id="ex16">
-                    <h3 id="ex16-h3">Dynamic Element</h3>
-                    <div class="col-md-4" id="ex1-col01">
-                        <p id="ex16-lead">
-                            There are a lot of uses for Dynamic Elements, you've probably came across one already such as the [Facebook Share Button](#facebook-share-button). Another example is video background (see the right for the sample codes). Basically, if you have a widget or something that needs to point at a specific location while making it editable to the users, Dynamic Element maybe a solution for you.
-                            <br><br>
-                            Another benefit of Dynamic Element is that the user will able to have a default element that is both available during preview and after published. As you noticed that other elements don't show a default images/videos if the user didn't upload any after publishing.
-                            <br><br>
-                            <strong>What is LEADPAGES_INPUT_DATA??</strong>
-                            <br><br>
-                            <em>LEADPAGES_INPUT_DATA</em> is a LeadPages™ specific variable that expose the ability to overwrite the default value defined in `template.json` and in the LeadPages™ published pages. If you defined this variable in your js file, this is the value that is overwritten by the user in the builder. So think of it as a bridge between the template and the builder.
-                            <br><br>
-                            <strong>Tip</strong>
-                            <p>If you are going to have a video background, find one that's without sound otherwise you can annoy the heck out of your potential buyers when they preview your template.</p>
-                        </p>
-
-                        <div data-lead-id="ex16-dynamic">
-                            <iframe class="video-player" width="100%" height="100%" src="///www.youtube.com/embed/YZKFFX4hVps?rel=0&amp;controls=0&amp;loop=0&amp;showinfo=0&amp;autoplay=1&amp;" frameborder="0" allowfullscreen></iframe>
-                        </div>
-                    </div>
-                    <div class="col-md-8" id="ex16-col02">
-                        <div class="panel panel-info" id="ex16-panel01">
-                            <div class="panel-heading" id="ex16-panel01-head">
-                                index.html snippet
-                            </div>
-                            <div class="panel-body" id="ex16-panel01-body01">
-<pre data-lead-id="ex16-pre01">
-&lt;div data-lead-id=&quot;video-dynamic&quot;&gt;
-    &lt;iframe class=&quot;video-player&quot; width=&quot;100%&quot; height=&quot;100%&quot; src=&quot;//www.youtube.com/embed/dhzI3Om9QIQ?rel=0&amp;controls=0&amp;loop=1&amp;showinfo=0&amp;autoplay=1&amp;playlist=8pEk9W5cm1k&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
-&lt;/div&gt;
-</pre>
-                            </div>
-                        </div>
-                        <div class="panel panel-info" id="ex16-panel02">
-                            <div class="panel-heading" id="ex16-panel02-head">meta/template.json snippet</div>
-                            <div class="panel-body" id="ex16-panel02-body01">
-<pre data-lead-id="ex16-pre02">
-{
-  "elements": [
-    {
-      "id": "video-dynamic",
-      "name": "Video Background",
-      "type": "dynamic",
-      "data": {
-        "variables": ["videourl"]
-      }
-    }
-  ],
-  "variables": {
-      "videourl": {
-            "variable": "videourl",
-            "default": "//www.youtube.com/embed/dhzI3Om9QIQ?rel=0&amp;controls=0&amp;loop=1&amp;showinfo=0&amp;autoplay=1&amp;playlist=dhzI3Om9QIQ",
-            "name": "The URL of the video",
-            "controls": true
-      }
-  }
-}
-</pre>
-                                </div>
-                            </div>
-                            <div class="panel panel-info" id="ex16-panel03">
-                                <div class="panel-heading" id="ex16-panel03-head">
-                                    js/functions.js snippet
-                                </div>
-                                <div class="panel-body" id="ex16-panel03-body01">
-<pre data-lead-id="ex16-pre02">
-    /* 
-      ---------- TEMPLATE DATA ----------
-      Same url as the `default` under the `variables` object in template.json
-      This url will be overriden by the user
-
-      Yes, the // at the end is needed for now. Fix is coming out soon!
-    */
-
-    var leadpages_input_data = {
-      'videourl'  : '//www.youtube.com/embed/dhzI3Om9QIQ?rel=0&amp;controls=0&amp;loop=1&amp;showinfo=0&amp;autoplay=1&amp;playlist=dhzI3Om9QIQ' //
-    };
-
-    //Set the url for the video
-    $(function() {
-        $('.video-player').attr('src', leadpages_input_data.videourl);
-    });
-</pre>
-                            </div>
-
-                        </div>
-                    </div>
-                </div>
-                <!-- /ex16 -->
-            </div>
-            <!-- /element examples -->
-            <div class="totop" id="s04-totop"><a href="#" id="s04-totop-link">Back to Top</a></div>
-        </div>
-    </div>
-    <!-- /s04 -->
-
-   <!-- s05 -->
-    <div class="content_container" id="s05">
-        <div class="container">
-            <h1 id="s05-h1">LeadBoxes&trade;</h1>
-            <div class="container-fluid json-props" id="s05-properties">
-                <div class="row content_container">
-                    <div class="col-md-6" id="s05-col01">
-                        <p id="s05-lead">The LeadBoxes opt-in form can be configured with a default aesthetic and copy options using the <em>form</em> object within <strong>template.json</strong>.</p>
-                        <div><img src="img/leadbox-before.png" alt="" class="img-responsive" id="s05-img01" /></div>
-                    </div>
-                    <div class="col-md-6" id="s05-col02">
-                       <div class="panel panel-info">
-                            <div class="panel-heading" id="s05-panel-head">
-                                meta/form.html snippet
-                            </div>
-                            <div class="panel-body" id="s05-panel-body">
-                                <pre data-lead-id="s05-pre">
-"form": {
-    "title": {
-        "css": {
-            "font-family": "Helvetica, Arial, sans-serif",
-            "font-size": "18pt;",
-            "letter-spacing": "0em;"
-        },
-        "html": "&lt;strong&gt;Enter your email address below to reserve _______... it's 100% FREE!&lt;/stron&gt;>"
-    },
-    "submit": {
-        "css": {
-            "background-color": "#ffcb01;",
-            "border-color": "#ffb403;",
-            "border-width": "0pt;",
-            "border-style": "solid;",
-            "font-family": "Helvetica, Arial, sans-serif",
-            "font-size": "14pt;",
-            "letter-spacing": "-0.1em;"
-        },
-        "html": "Free Instant Access &raquo;"
-    },
-    "privacy": {
-        "css": {
-            "font-family": "Helvetica, Arial, sans-serif",
-            "font-size": "12pt;",
-            "letter-spacing": "-0.1em;"
-        },
-        "html": "&lt;div&gt;&lt;i class=\"icon-lock\">&lt;/i&gt;We hate SPAM and promise to keep your email address safe. &lt;div&gt;"
-    }
-}
-</pre>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="totop" id="s05-totop"><a href="#" id="s05-totop-link">Back to Top</a></div>
-        </div>
-    </div>
-    <!-- /s05 -->
-
-   <!-- s06 -->
-    <div class="content_container" id="s06">
-        <div class="container">
-            <h1 id="s06-h1">About</h1>
-            <p class="lead" id="s06-lead">This page was created from a LeadPages&trade; template. We thought the best way to document and share the various subtleties of a LeadPages template was to build one and publish a page for all to see.
-            <br><br>
-            So, if you're interested in creating your own template, we invite you to download this template from our <a href="https://github.com/LeadPages/template-starter-kit" target="_blank">GitHub repository</a> and take a look at the <a href="https://github.com/LeadPages/template-starter-kit#template-starter-kit" target="_blank">README</a>.<br><br>
-            -- <em>The LeadPages Engineering Team</em>
-            </p>
-            <div class="totop" id="s06-totop"><a href="#" id="s06-totop-link">Back to Top</a></div>
-        </div>
-    </div>
-    <!-- /s06 -->
-
-    <!-- s07 -->
-    <div class="content_container" id="s07">
-        <div class="container footer">
-            <p id="s07-legal">&copy; 2014 LeadPages.net / All Rights Reserved / <a href="https://www.leadpages.net/legal" target="_blank">Legal Information</a></p>
-        </div>
-    </div>
-    <!-- /s07 -->
 </body>
 </html>

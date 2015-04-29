@@ -2,2017 +2,215 @@
     "id": "<%= template_id %>",
     "name": "<%= template_name %>",
     "mobile": true,
-    "notes": "Updated with Syntax 4.0",
+    "notes": "Initial Release 1.0",
     "syntax": 4,
     "version": 1.0,
     "style": {
         "replacements": [
             {
                 "type": "color",
-                "name": "Top Navigation Background Color",
-                "find": "#F8F8F8"
+                "name": "Header Color",
+                "find": "#1e8cc6"
             },
             {
                 "type": "color",
-                "name": "Top Navigation Link Color",
-                "find": "#777776"
+                "name": "Banner Background Color",
+                "find": "#39495A"
             },
             {
                 "type": "color",
-                "name": "Sect #1 Background Color",
-                "find": "#F1F6E4"
+                "name": "Banner Text Color",
+                "find": "#fffffe"
             },
             {
                 "type": "color",
-                "name": "Sect. #2 Background Color",
-                "find": "#E4EFF5"
+                "name": "Date Separator Color",
+                "find": "#989898"
             },
             {
                 "type": "color",
-                "name": "Sect. #3 Background Color",
-                "find": "#F6F0E4"
+                "name": "Button Color",
+                "find": "#229cdc"
             },
             {
                 "type": "color",
-                "name": "Sect. #4 Background Color",
-                "find": "#E4E4E4"
+                "name": "Button Text Color",
+                "find": "#fdfefe"
             },
             {
                 "type": "color",
-                "name": "Sect. #5 Background Color",
-                "find": "#E4EEF6"
+                "name": "Button Hover Color",
+                "find": "#1b7cb0"
             },
             {
                 "type": "color",
-                "name": "Sect. #6 Background Color",
-                "find": "#FFFFFE"
+                "name": "Countdown Background Color",
+                "find": "#656564"
+            },
+            {
+                "type": "color",
+                "name": "Countdown Number Color",
+                "find": "#FAFAFA"
+            },
+            {
+                "type": "color",
+                "name": "Countdown Label Color",
+                "find": "#adadad"
+            },
+            {
+                "type": "color",
+                "name": "Description Background Color",
+                "find": "#fffffc"
+            },
+            {
+                "type": "color",
+                "name": "Description Header Title Color",
+                "find": "#333335"
+            },
+            {
+                "type": "color",
+                "name": "Description Subheader Title Color",
+                "find": "#555557"
+            },
+            {
+                "type": "color",
+                "name": "Description Paragraph Color",
+                "find": "#222224"
+            },
+            {
+                "type": "color",
+                "name": "Testimonial Background Color",
+                "find": "#727B84"
+            },
+            {
+                "type": "color",
+                "name": "Testimonial Text Color",
+                "find": "#fefefd"
+            },
+            {
+                "type": "color",
+                "name": "Call to Action Background Color",
+                "find": "#fefffe"
+            },
+            {
+                "type": "color",
+                "name": "Call to Action Text Color",
+                "find": "#333332"
+            },
+            {
+                "type": "color",
+                "name": "Footer Background Color",
+                "find": "#656565"
+            },
+            {
+                "type": "color",
+                "name": "Footer Text Color",
+                "find": "#fefdfe"
+            },
+            {
+                "type": "color",
+                "name": "Footer Text Hover Color",
+                "find": "#a0a0a0"
             }
         ]
-    },
-    "form": {
-        "title": {
-            "css": {
-                "font-family": "Helvetica, Arial, sans-serif",
-                "font-size": "18pt;",
-                "letter-spacing": "0em;"
-            },
-            "html": "<strong>Enter your email address below to reserve _______... it's 100% FREE!</strong>"
-        },
-        "submit": {
-            "css": {
-                "background-color": "#ffcb01;",
-                "border-color": "#ffb403;",
-                "border-width": "0pt;",
-                "border-style": "solid;",
-                "font-family": "Helvetica, Arial, sans-serif",
-                "font-size": "14pt;",
-                "letter-spacing": "-0.1em;"
-            },
-            "html": "Free Instant Access &raquo;"
-        },
-        "privacy": {
-            "css": {
-                "font-family": "Helvetica, Arial, sans-serif",
-                "font-size": "12pt;",
-                "letter-spacing": "-0.1em;"
-            },
-            "html": "<div><i class=\"icon-lock\"></i>We hate SPAM and promise to keep your email address safe. </div>"
-        }
     },
     "variables": {
         "facebookurl": {
             "variable": "facebookurl",
-            "dafault": "",
+            "default": "",
             "name": "The URL to share on Facebook. Leave blank to share the current page."
-        },
-        "videourl": {
-            "variable": "videourl",
-            "default": "//www.youtube.com/embed/YZKFFX4hVps?rel=0&amp;controls=0&amp;loop=1&amp;showinfo=0&amp;autoplay=1&amp;playlist=dhzI3Om9QIQ",
-            "name": "The url of the video. Append these for options: ?rel=0&amp;controls=0&amp;loop=1&amp;showinfo=0&amp;autoplay=1&amp;"
         }
     },
     "elements": [
         {
-            "id": "s00",
-            "name": "Top Navigation",
+            "id": "container--header-wrapper",
+            "name": "Logo Bar",
             "type": "container"
         },
         {
-            "id": "s01",
-            "name": "Section #1",
+            "id": "container--intro-wrapper",
+            "name": "Banner Section",
             "type": "container"
         },
         {
-            "id": "s02",
-            "name": "Section #2",
+            "id": "container--countdown-wrapper",
+            "name": "Countdown Section",
             "type": "container"
         },
         {
-            "id": "s03",
-            "name": "Section #3",
+            "id": "container--description-wrapper",
+            "name": "Description Section",
             "type": "container"
         },
         {
-            "id": "s04",
-            "name": "Section #4",
+            "id": "container--testimonial-wrapper",
+            "name": "Testimonial Section",
             "type": "container"
         },
         {
-            "id": "s05",
-            "name": "Section #5",
+            "id": "container--cta-wrapper",
+            "name": "Call to Action Section",
             "type": "container"
         },
         {
-            "id": "s06",
-            "name": "Section #6",
+            "id": "container--footer-wrapper",
+            "name": "Footer Section",
             "type": "container"
         },
         {
-            "id": "s07",
-            "name": "Section #7",
+            "id": "container--social-media",
+            "name": "Social Media Section",
             "type": "container"
         },
         {
-            "id": "s00-logo",
-            "name": "Logo",
-            "type": "image-link",
-            "comment": "Choose a new logo.",
-            "data": {
-                "max-width": 220,
-                "max-height": 60
-            }
-        },
-        {
-            "id": "s00-nav",
-            "name": "Nav Items",
+            "id": "container--social-facebook",
+            "name": "Facebook Icon",
             "type": "container"
         },
         {
-            "id": "s00-nav01",
-            "name": "Nav Item #1",
-            "type": "link"
-        },
-        {
-            "id": "s00-nav02",
-            "name": "Nav Item #2",
-            "type": "link"
-        },
-        {
-            "id": "s00-nav03",
-            "name": "Nav Item #3",
-            "type": "link"
-        },
-        {
-            "id": "s00-nav04",
-            "name": "Nav Item #4",
-            "type": "link"
-        },
-        {
-            "id": "s00-nav05",
-            "name": "Nav Item #5",
-            "type": "link"
-        },
-        {
-            "id": "s00-nav06",
-            "name": "Nav Item #6",
-            "type": "link"
-        },
-        {
-            "id": "s01-h1",
-            "name": "Header",
-            "type": "text"
-        },
-        {
-            "id": "s02-h1",
-            "name": "Header",
-            "type": "text"
-        },
-        {
-            "id": "s03-h1",
-            "name": "Header",
-            "type": "text"
-        },
-        {
-            "id": "s04-h1",
-            "name": "Header",
-            "type": "text"
-        },
-        {
-            "id": "s05-h1",
-            "name": "Header",
-            "type": "text"
-        },
-        {
-            "id": "s06-h1",
-            "name": "Header",
-            "type": "text"
-        },
-        {
-            "id": "s01-lead",
-            "name": "Lead",
-            "type": "text"
-        },
-        {
-            "id": "s02-lead",
-            "name": "Lead",
-            "type": "text"
-        },
-        {
-            "id": "s03-lead",
-            "name": "Lead",
-            "type": "text"
-        },
-        {
-            "id": "s05-lead",
-            "name": "Lead",
-            "type": "text"
-        },
-        {
-            "id": "s06-lead",
-            "name": "Lead",
-            "type": "text"
-        },
-        {
-            "id": "s01-h3-01",
-            "name": "Sub-head #1",
-            "type": "text"
-        },
-        {
-            "id": "s02-h3-01",
-            "name": "Sub-head #1",
-            "type": "text"
-        },
-        {
-            "id": "s03-h3-01",
-            "name": "Sub-head #1",
-            "type": "text"
-        },
-        {
-            "id": "s01-h3-02",
-            "name": "Sub-head #2",
-            "type": "text"
-        },
-        {
-            "id": "s02-h3-02",
-            "name": "Sub-head #2",
-            "type": "text"
-        },
-        {
-            "id": "s03-h3-02",
-            "name": "Sub-head #2",
-            "type": "text"
-        },
-        {
-            "id": "s01-pre",
-            "name": "Pre-formatted Text",
-            "type": "text"
-        },
-        {
-            "id": "s02-pre",
-            "name": "Pre-formatted Text",
-            "type": "text"
-        },
-        {
-            "id": "s03-pre",
-            "name": "Pre-formatted Text",
-            "type": "text"
-        },
-        {
-            "id": "s05-pre",
-            "name": "Pre-formatted Text",
-            "type": "text"
-        },
-        {
-            "id": "s01-list-group",
-            "name": "List",
-            "type": "text"
-        },
-        {
-            "id": "s01-totop",
-            "name": "Top Link Container",
+            "id": "container--social-twitter",
+            "name": "Twitter Icon",
             "type": "container"
         },
         {
-            "id": "s02-totop",
-            "name": "Top Link Container",
+            "id": "container--social-google",
+            "name": "Google Plus Icon",
             "type": "container"
         },
         {
-            "id": "s03-totop",
-            "name": "Top Link Container",
+            "id": "container--social-linkedin",
+            "name": "LinkedIn Icon",
             "type": "container"
         },
         {
-            "id": "s04-totop",
-            "name": "Top Link Container",
+            "id": "container--imglnk-wrapper",
+            "name": "Image Link Section",
             "type": "container"
         },
         {
-            "id": "s05-totop",
-            "name": "Top Link Container",
+            "id": "container--embed-wrapper",
+            "name": "Embed Section",
             "type": "container"
         },
         {
-            "id": "s06-totop",
-            "name": "Top Link Container",
+            "id": "container--hr1",
+            "name": "Intro HorizontalRule",
             "type": "container"
         },
         {
-            "id": "s01-totop-link",
-            "name": "Top Link",
+            "id": "container--hr2",
+            "name": "Social HorizontalRule",
             "type": "container"
-        },
-        {
-            "id": "s02-totop-link",
-            "name": "Top Link",
-            "type": "container"
-        },
-        {
-            "id": "s03-totop-link",
-            "name": "Top Link",
-            "type": "container"
-        },
-        {
-            "id": "s04-totop-link",
-            "name": "Top Link",
-            "type": "container"
-        },
-        {
-            "id": "s05-totop-link",
-            "name": "Top Link",
-            "type": "container"
-        },
-        {
-            "id": "s06-totop-link",
-            "name": "Top Link",
-            "type": "container"
-        },
-        {
-            "id": "02-properties",
-            "name": "Properties",
-            "type": "container"
-        },
-        {
-            "id": "s02-property01",
-            "name": "Property #1",
-            "type": "container"
-        },
-        {
-            "id": "s02-property02",
-            "name": "Property #2",
-            "type": "container"
-        },
-        {
-            "id": "s02-property03",
-            "name": "Property #3",
-            "type": "container"
-        },
-        {
-            "id": "s02-property04",
-            "name": "Property #4",
-            "type": "container"
-        },
-        {
-            "id": "s02-property05",
-            "name": "Property #5",
-            "type": "container"
-        },
-        {
-            "id": "s02-property06",
-            "name": "Property #6",
-            "type": "container"
-        },
-        {
-            "id": "s02-property07",
-            "name": "Property #7",
-            "type": "container"
-        },
-        {
-            "id": "s02-property08",
-            "name": "Property #8",
-            "type": "container"
-        },
-        {
-            "id": "s02-property09",
-            "name": "Property #9",
-            "type": "container"
-        },
-        {
-            "id": "s02-property10",
-            "name": "Property #10",
-            "type": "container"
-        },
-        {
-            "id": "s02-property01-col01",
-            "name": "Column #1",
-            "type": "container"
-        },
-        {
-            "id": "s02-property02-col01",
-            "name": "Column #1",
-            "type": "container"
-        },
-        {
-            "id": "s02-property03-col01",
-            "name": "Column #1",
-            "type": "container"
-        },
-        {
-            "id": "s02-property04-col01",
-            "name": "Column #1",
-            "type": "container"
-        },
-        {
-            "id": "s02-property05-col01",
-            "name": "Column #1",
-            "type": "container"
-        },
-        {
-            "id": "s02-property06-col01",
-            "name": "Column #1",
-            "type": "container"
-        },
-        {
-            "id": "s02-property07-col01",
-            "name": "Column #1",
-            "type": "container"
-        },
-        {
-            "id": "s02-property08-col01",
-            "name": "Column #1",
-            "type": "container"
-        },
-        {
-            "id": "s02-property09-col01",
-            "name": "Column #1",
-            "type": "container"
-        },
-        {
-            "id": "s02-property10-col01",
-            "name": "Column #1",
-            "type": "container"
-        },
-        {
-            "id": "s02-property01-col02",
-            "name": "Column #2",
-            "type": "container"
-        },
-        {
-            "id": "s02-property02-col02",
-            "name": "Column #2",
-            "type": "container"
-        },
-        {
-            "id": "s02-property03-col02",
-            "name": "Column #2",
-            "type": "container"
-        },
-        {
-            "id": "s02-property04-col02",
-            "name": "Column #2",
-            "type": "container"
-        },
-        {
-            "id": "s02-property05-col02",
-            "name": "Column #2",
-            "type": "container"
-        },
-        {
-            "id": "s02-property06-col02",
-            "name": "Column #2",
-            "type": "container"
-        },
-        {
-            "id": "s02-property07-col02",
-            "name": "Column #2",
-            "type": "container"
-        },
-        {
-            "id": "s02-property08-col02",
-            "name": "Column #2",
-            "type": "container"
-        },
-        {
-            "id": "s02-property09-col02",
-            "name": "Column #2",
-            "type": "container"
-        },
-        {
-            "id": "s02-property10-col02",
-            "name": "Column #2",
-            "type": "container"
-        },
-        {
-            "id": "s02-property01-prop",
-            "name": "Property",
-            "type": "text"
-        },
-        {
-            "id": "s02-property02-prop",
-            "name": "Property",
-            "type": "text"
-        },
-        {
-            "id": "s02-property03-prop",
-            "name": "Property",
-            "type": "text"
-        },
-        {
-            "id": "s02-property04-prop",
-            "name": "Property",
-            "type": "text"
-        },
-        {
-            "id": "s02-property05-prop",
-            "name": "Property",
-            "type": "text"
-        },
-        {
-            "id": "s02-property06-prop",
-            "name": "Property",
-            "type": "text"
-        },
-        {
-            "id": "s02-property07-prop",
-            "name": "Property",
-            "type": "text"
-        },
-        {
-            "id": "s02-property08-prop",
-            "name": "Property",
-            "type": "text"
-        },
-        {
-            "id": "s02-property09-prop",
-            "name": "Property",
-            "type": "text"
-        },
-        {
-            "id": "s02-property10-prop",
-            "name": "Property",
-            "type": "text"
-        },
-        {
-            "id": "s02-property01-req",
-            "name": "Requirement",
-            "type": "text"
-        },
-        {
-            "id": "s02-property02-req",
-            "name": "Requirement",
-            "type": "text"
-        },
-        {
-            "id": "s02-property03-req",
-            "name": "Requirement",
-            "type": "text"
-        },
-        {
-            "id": "s02-property04-req",
-            "name": "Requirement",
-            "type": "text"
-        },
-        {
-            "id": "s02-property05-req",
-            "name": "Requirement",
-            "type": "text"
-        },
-        {
-            "id": "s02-property06-req",
-            "name": "Requirement",
-            "type": "text"
-        },
-        {
-            "id": "s02-property07-req",
-            "name": "Requirement",
-            "type": "text"
-        },
-        {
-            "id": "s02-property08-req",
-            "name": "Requirement",
-            "type": "text"
-        },
-        {
-            "id": "s02-property09-req",
-            "name": "Requirement",
-            "type": "text"
-        },
-        {
-            "id": "s02-property10-req",
-            "name": "Requirement",
-            "type": "text"
-        },
-        {
-            "id": "s02-property01-desc",
-            "name": "Description",
-            "type": "text"
-        },
-        {
-            "id": "s02-property02-desc",
-            "name": "Description",
-            "type": "text"
-        },
-        {
-            "id": "s02-property03-desc",
-            "name": "Description",
-            "type": "text"
-        },
-        {
-            "id": "s02-property04-desc",
-            "name": "Description",
-            "type": "text"
-        },
-        {
-            "id": "s02-property05-desc",
-            "name": "Description",
-            "type": "text"
-        },
-        {
-            "id": "s02-property06-desc",
-            "name": "Description",
-            "type": "text"
-        },
-        {
-            "id": "s02-property07-desc",
-            "name": "Description",
-            "type": "text"
-        },
-        {
-            "id": "s02-property08-desc",
-            "name": "Description",
-            "type": "text"
-        },
-        {
-            "id": "s02-property09-desc",
-            "name": "Description",
-            "type": "text"
-        },
-        {
-            "id": "s02-property10-desc",
-            "name": "Description",
-            "type": "text"
-        },
-        {
-            "id": "s02-property01-example",
-            "name": "Example",
-            "type": "text"
-        },
-        {
-            "id": "s02-property02-example",
-            "name": "Example",
-            "type": "text"
-        },
-        {
-            "id": "s02-property03-example",
-            "name": "Example",
-            "type": "text"
-        },
-        {
-            "id": "s02-property04-example",
-            "name": "Example",
-            "type": "text"
-        },
-        {
-            "id": "s02-property05-example",
-            "name": "Example",
-            "type": "text"
-        },
-        {
-            "id": "s02-property06-example",
-            "name": "Example",
-            "type": "text"
-        },
-        {
-            "id": "s02-property07-example",
-            "name": "Example",
-            "type": "text"
-        },
-        {
-            "id": "s02-property08-example",
-            "name": "Example",
-            "type": "text"
-        },
-        {
-            "id": "s02-property09-example",
-            "name": "Example",
-            "type": "text"
-        },
-        {
-            "id": "s02-property10-example",
-            "name": "Example",
-            "type": "text"
-        },
-        {
-            "id": "03-properties",
-            "name": "Properties",
-            "type": "container"
-        },
-        {
-            "id": "s03-property01",
-            "name": "Property #1",
-            "type": "container"
-        },
-        {
-            "id": "s03-property02",
-            "name": "Property #2",
-            "type": "container"
-        },
-        {
-            "id": "s03-property03",
-            "name": "Property #3",
-            "type": "container"
-        },
-        {
-            "id": "s03-property01-col01",
-            "name": "Column #1",
-            "type": "container"
-        },
-        {
-            "id": "s03-property02-col01",
-            "name": "Column #1",
-            "type": "container"
-        },
-        {
-            "id": "s03-property03-col01",
-            "name": "Column #1",
-            "type": "container"
-        },
-        {
-            "id": "s03-property01-col02",
-            "name": "Column #2",
-            "type": "container"
-        },
-        {
-            "id": "s03-property02-col02",
-            "name": "Column #2",
-            "type": "container"
-        },
-        {
-            "id": "s03-property03-col02",
-            "name": "Column #2",
-            "type": "container"
-        },
-        {
-            "id": "s03-property01-prop",
-            "name": "Property",
-            "type": "text"
-        },
-        {
-            "id": "s03-property02-prop",
-            "name": "Property",
-            "type": "text"
-        },
-        {
-            "id": "s03-property03-prop",
-            "name": "Property",
-            "type": "text"
-        },
-        {
-            "id": "s03-property01-req",
-            "name": "Requirement",
-            "type": "text"
-        },
-        {
-            "id": "s03-property02-req",
-            "name": "Requirement",
-            "type": "text"
-        },
-        {
-            "id": "s03-property03-req",
-            "name": "Requirement",
-            "type": "text"
-        },
-        {
-            "id": "s03-property01-desc",
-            "name": "Description",
-            "type": "text"
-        },
-        {
-            "id": "s03-property02-desc",
-            "name": "Description",
-            "type": "text"
-        },
-        {
-            "id": "s03-property03-desc",
-            "name": "Description",
-            "type": "text"
-        },
-        {
-            "id": "s03-property01-example",
-            "name": "Example",
-            "type": "text"
-        },
-        {
-            "id": "s03-property02-example",
-            "name": "Example",
-            "type": "text"
-        },
-        {
-            "id": "s03-property03-example",
-            "name": "Example",
-            "type": "text"
-        },
-        {
-            "id": "s05-col01",
-            "type": "container",
-            "name": "Column #1"
-        },
-        {
-            "id": "s05-col02",
-            "type": "container",
-            "name": "Column #2"
-        },
-        {
-            "id": "s05-panel-head",
-            "type": "text",
-            "name": "Header"
-        },
-        {
-            "id": "s05-panel-body",
-            "type": "container",
-            "name": "Body"
-        },
-        {
-            "id": "s05-img01",
-            "type": "image",
-            "name": "Image #1",
-            "data": {
-                "max-width": 540
-            }
-        },
-        {
-            "id": "s07-legal",
-            "type": "text",
-            "name": "Legal Copy"
-        },
-        {
-            "id": "ex01",
-            "type": "container",
-            "name": "Example #1"
-        },
-        {
-            "id": "ex02",
-            "type": "container",
-            "name": "Example #2"
-        },
-        {
-            "id": "ex03",
-            "type": "container",
-            "name": "Example #3"
-        },
-        {
-            "id": "ex04",
-            "type": "container",
-            "name": "Example #4"
-        },
-        {
-            "id": "ex05",
-            "type": "container",
-            "name": "Example #5"
-        },
-        {
-            "id": "ex06",
-            "type": "container",
-            "name": "Example #6"
-        },
-        {
-            "id": "ex07",
-            "type": "container",
-            "name": "Example #7"
-        },
-        {
-            "id": "ex08",
-            "type": "container",
-            "name": "Example #8"
-        },
-        {
-            "id": "ex09",
-            "type": "container",
-            "name": "Example #9"
-        },
-        {
-            "id": "ex10",
-            "type": "container",
-            "name": "Example #10"
-        },
-        {
-            "id": "ex11",
-            "type": "container",
-            "name": "Example #11"
-        },
-        {
-            "id": "ex12",
-            "type": "container",
-            "name": "Example #12"
-        },
-        {
-            "id": "ex13",
-            "type": "container",
-            "name": "Example #13"
-        },
-        {
-            "id": "ex14",
-            "type": "container",
-            "name": "Example #14"
-        },
-        {
-            "id": "ex15",
-            "type": "container",
-            "name": "Example #15"
-        },
-        {
-            "id": "ex16",
-            "type": "container",
-            "name": "Example #16"
-        },
-        {
-            "id": "ex01-h3",
-            "type": "text",
-            "name": "Sub-head"
-        },
-        {
-            "id": "ex02-h3",
-            "type": "text",
-            "name": "Sub-head"
-        },
-        {
-            "id": "ex03-h3",
-            "type": "text",
-            "name": "Sub-head"
-        },
-        {
-            "id": "ex04-h3",
-            "type": "text",
-            "name": "Sub-head"
-        },
-        {
-            "id": "ex05-h3",
-            "type": "text",
-            "name": "Sub-head"
-        },
-        {
-            "id": "ex06-h3",
-            "type": "text",
-            "name": "Sub-head"
-        },
-        {
-            "id": "ex07-h3",
-            "type": "text",
-            "name": "Sub-head"
-        },
-        {
-            "id": "ex08-h3",
-            "type": "text",
-            "name": "Sub-head"
-        },
-        {
-            "id": "ex09-h3",
-            "type": "text",
-            "name": "Sub-head"
-        },
-        {
-            "id": "ex10-h3",
-            "type": "text",
-            "name": "Sub-head"
-        },
-        {
-            "id": "ex11-h3",
-            "type": "text",
-            "name": "Sub-head"
-        },
-        {
-            "id": "ex12-h3",
-            "type": "text",
-            "name": "Sub-head"
-        },
-        {
-            "id": "ex13-h3",
-            "type": "text",
-            "name": "Sub-head"
-        },
-        {
-            "id": "ex14-h3",
-            "type": "text",
-            "name": "Sub-head"
-        },
-        {
-            "id": "ex15-h3",
-            "type": "text",
-            "name": "Sub-head"
-        },
-        {
-            "id": "ex16-h3",
-            "type": "text",
-            "name": "Sub-head"
-        },
-        {
-            "id": "ex01-col01",
-            "type": "container",
-            "name": "Column #1"
-        },
-        {
-            "id": "ex02-col01",
-            "type": "container",
-            "name": "Column #1"
-        },
-        {
-            "id": "ex03-col01",
-            "type": "container",
-            "name": "Column #1"
-        },
-        {
-            "id": "ex04-col01",
-            "type": "container",
-            "name": "Column #1"
-        },
-        {
-            "id": "ex05-col01",
-            "type": "container",
-            "name": "Column #1"
-        },
-        {
-            "id": "ex06-col01",
-            "type": "container",
-            "name": "Column #1"
-        },
-        {
-            "id": "ex07-col01",
-            "type": "container",
-            "name": "Column #1"
-        },
-        {
-            "id": "ex08-col01",
-            "type": "container",
-            "name": "Column #1"
-        },
-        {
-            "id": "ex09-col01",
-            "type": "container",
-            "name": "Column #1"
-        },
-        {
-            "id": "ex10-col01",
-            "type": "container",
-            "name": "Column #1"
-        },
-        {
-            "id": "ex11-col01",
-            "type": "container",
-            "name": "Column #1"
-        },
-        {
-            "id": "ex12-col01",
-            "type": "container",
-            "name": "Column #1"
-        },
-        {
-            "id": "ex13-col01",
-            "type": "container",
-            "name": "Column #1"
-        },
-        {
-            "id": "ex14-col01",
-            "type": "container",
-            "name": "Column #1"
-        },
-        {
-            "id": "ex15-col01",
-            "type": "container",
-            "name": "Column #1"
-        },
-        {
-            "id": "ex16-col01",
-            "type": "container",
-            "name": "Column #1"
-        },
-        {
-            "id": "ex01-col02",
-            "type": "container",
-            "name": "Column #2"
-        },
-        {
-            "id": "ex02-col02",
-            "type": "container",
-            "name": "Column #2"
-        },
-        {
-            "id": "ex03-col02",
-            "type": "container",
-            "name": "Column #2"
-        },
-        {
-            "id": "ex04-col02",
-            "type": "container",
-            "name": "Column #2"
-        },
-        {
-            "id": "ex05-col02",
-            "type": "container",
-            "name": "Column #2"
-        },
-        {
-            "id": "ex06-col02",
-            "type": "container",
-            "name": "Column #2"
-        },
-        {
-            "id": "ex07-col02",
-            "type": "container",
-            "name": "Column #2"
-        },
-        {
-            "id": "ex08-col02",
-            "type": "container",
-            "name": "Column #2"
-        },
-        {
-            "id": "ex09-col02",
-            "type": "container",
-            "name": "Column #2"
-        },
-        {
-            "id": "ex10-col02",
-            "type": "container",
-            "name": "Column #2"
-        },
-        {
-            "id": "ex11-col02",
-            "type": "container",
-            "name": "Column #2"
-        },
-        {
-            "id": "ex12-col02",
-            "type": "container",
-            "name": "Column #2"
-        },
-        {
-            "id": "ex13-col02",
-            "type": "container",
-            "name": "Column #2"
-        },
-        {
-            "id": "ex14-col02",
-            "type": "container",
-            "name": "Column #2"
-        },
-        {
-            "id": "ex15-col02",
-            "type": "container",
-            "name": "Column #2"
-        },
-        {
-            "id": "ex16-col02",
-            "type": "container",
-            "name": "Column #2"
-        },
-        {
-            "id": "ex01-panel01",
-            "type": "container",
-            "name": "Panel #1"
-        },
-        {
-            "id": "ex02-panel01",
-            "type": "container",
-            "name": "Panel #1"
-        },
-        {
-            "id": "ex03-panel01",
-            "type": "container",
-            "name": "Panel #1"
-        },
-        {
-            "id": "ex04-panel01",
-            "type": "container",
-            "name": "Panel #1"
-        },
-        {
-            "id": "ex05-panel01",
-            "type": "container",
-            "name": "Panel #1"
-        },
-        {
-            "id": "ex06-panel01",
-            "type": "container",
-            "name": "Panel #1"
-        },
-        {
-            "id": "ex07-panel01",
-            "type": "container",
-            "name": "Panel #1"
-        },
-        {
-            "id": "ex08-panel01",
-            "type": "container",
-            "name": "Panel #1"
-        },
-        {
-            "id": "ex09-panel01",
-            "type": "container",
-            "name": "Panel #1"
-        },
-        {
-            "id": "ex10-panel01",
-            "type": "container",
-            "name": "Panel #1"
-        },
-        {
-            "id": "ex11-panel01",
-            "type": "container",
-            "name": "Panel #1"
-        },
-        {
-            "id": "ex12-panel01",
-            "type": "container",
-            "name": "Panel #1"
-        },
-        {
-            "id": "ex13-panel01",
-            "type": "container",
-            "name": "Panel #1"
-        },
-        {
-            "id": "ex14-panel01",
-            "type": "container",
-            "name": "Panel #1"
-        },
-        {
-            "id": "ex15-panel01",
-            "type": "container",
-            "name": "Panel #1"
-        },
-        {
-            "id": "ex16-panel01",
-            "type": "container",
-            "name": "Panel #1"
-        },
-        {
-            "id": "ex01-panel02",
-            "type": "container",
-            "name": "Panel #2"
-        },
-        {
-            "id": "ex02-panel02",
-            "type": "container",
-            "name": "Panel #2"
-        },
-        {
-            "id": "ex03-panel02",
-            "type": "container",
-            "name": "Panel #2"
-        },
-        {
-            "id": "ex04-panel02",
-            "type": "container",
-            "name": "Panel #2"
-        },
-        {
-            "id": "ex05-panel02",
-            "type": "container",
-            "name": "Panel #2"
-        },
-        {
-            "id": "ex06-panel02",
-            "type": "container",
-            "name": "Panel #2"
-        },
-        {
-            "id": "ex07-panel02",
-            "type": "container",
-            "name": "Panel #2"
-        },
-        {
-            "id": "ex08-panel02",
-            "type": "container",
-            "name": "Panel #2"
-        },
-        {
-            "id": "ex09-panel02",
-            "type": "container",
-            "name": "Panel #2"
-        },
-        {
-            "id": "ex10-panel02",
-            "type": "container",
-            "name": "Panel #2"
-        },
-        {
-            "id": "ex11-panel02",
-            "type": "container",
-            "name": "Panel #2"
-        },
-        {
-            "id": "ex12-panel02",
-            "type": "container",
-            "name": "Panel #2"
-        },
-        {
-            "id": "ex13-panel02",
-            "type": "container",
-            "name": "Panel #2"
-        },
-        {
-            "id": "ex14-panel02",
-            "type": "container",
-            "name": "Panel #2"
-        },
-        {
-            "id": "ex15-panel02",
-            "type": "container",
-            "name": "Panel #2"
-        },
-        {
-            "id": "ex16-panel02",
-            "type": "container",
-            "name": "Panel #2"
-        },
-        {
-            "id": "ex08-panel03",
-            "type": "container",
-            "name": "Panel #3"
-        },
-        {
-            "id": "ex16-panel03",
-            "type": "container",
-            "name": "Panel #3"
-        },
-        {
-            "id": "ex01-panel01-head",
-            "type": "text",
-            "name": "Header"
-        },
-        {
-            "id": "ex02-panel01-head",
-            "type": "text",
-            "name": "Header"
-        },
-        {
-            "id": "ex03-panel01-head",
-            "type": "text",
-            "name": "Header"
-        },
-        {
-            "id": "ex04-panel01-head",
-            "type": "text",
-            "name": "Header"
-        },
-        {
-            "id": "ex05-panel01-head",
-            "type": "text",
-            "name": "Header"
-        },
-        {
-            "id": "ex06-panel01-head",
-            "type": "text",
-            "name": "Header"
-        },
-        {
-            "id": "ex07-panel01-head",
-            "type": "text",
-            "name": "Header"
-        },
-        {
-            "id": "ex08-panel01-head",
-            "type": "text",
-            "name": "Header"
-        },
-        {
-            "id": "ex09-panel01-head",
-            "type": "text",
-            "name": "Header"
-        },
-        {
-            "id": "ex10-panel01-head",
-            "type": "text",
-            "name": "Header"
-        },
-        {
-            "id": "ex11-panel01-head",
-            "type": "text",
-            "name": "Header"
-        },
-        {
-            "id": "ex12-panel01-head",
-            "type": "text",
-            "name": "Header"
-        },
-        {
-            "id": "ex13-panel01-head",
-            "type": "text",
-            "name": "Header"
-        },
-        {
-            "id": "ex14-panel01-head",
-            "type": "text",
-            "name": "Header"
-        },
-        {
-            "id": "ex15-panel01-head",
-            "type": "text",
-            "name": "Header"
-        },
-        {
-            "id": "ex16-panel01-head",
-            "type": "text",
-            "name": "Header"
-        },
-        {
-            "id": "ex01-panel02-head",
-            "type": "text",
-            "name": "Header"
-        },
-        {
-            "id": "ex02-panel02-head",
-            "type": "text",
-            "name": "Header"
-        },
-        {
-            "id": "ex03-panel02-head",
-            "type": "text",
-            "name": "Header"
-        },
-        {
-            "id": "ex04-panel02-head",
-            "type": "text",
-            "name": "Header"
-        },
-        {
-            "id": "ex05-panel02-head",
-            "type": "text",
-            "name": "Header"
-        },
-        {
-            "id": "ex06-panel02-head",
-            "type": "text",
-            "name": "Header"
-        },
-        {
-            "id": "ex07-panel02-head",
-            "type": "text",
-            "name": "Header"
-        },
-        {
-            "id": "ex08-panel02-head",
-            "type": "text",
-            "name": "Header"
-        },
-        {
-            "id": "ex09-panel02-head",
-            "type": "text",
-            "name": "Header"
-        },
-        {
-            "id": "ex10-panel02-head",
-            "type": "text",
-            "name": "Header"
-        },
-        {
-            "id": "ex11-panel02-head",
-            "type": "text",
-            "name": "Header"
-        },
-        {
-            "id": "ex12-panel02-head",
-            "type": "text",
-            "name": "Header"
-        },
-        {
-            "id": "ex13-panel02-head",
-            "type": "text",
-            "name": "Header"
-        },
-        {
-            "id": "ex14-panel02-head",
-            "type": "text",
-            "name": "Header"
-        },
-        {
-            "id": "ex15-panel02-head",
-            "type": "text",
-            "name": "Header"
-        },
-        {
-            "id": "ex16-panel02-head",
-            "type": "text",
-            "name": "Header"
-        },
-        {
-            "id": "ex08-panel03-head",
-            "type": "text",
-            "name": "Header"
-        },
-        {
-            "id": "ex16-panel03-head",
-            "type": "text",
-            "name": "Header"
-        },
-        {
-            "id": "ex01-panel01-body",
-            "type": "container",
-            "name": "Body"
-        },
-        {
-            "id": "ex02-panel01-body",
-            "type": "container",
-            "name": "Body"
-        },
-        {
-            "id": "ex03-panel01-body",
-            "type": "container",
-            "name": "Body"
-        },
-        {
-            "id": "ex04-panel01-body",
-            "type": "container",
-            "name": "Body"
-        },
-        {
-            "id": "ex05-panel01-body",
-            "type": "container",
-            "name": "Body"
-        },
-        {
-            "id": "ex06-panel01-body",
-            "type": "container",
-            "name": "Body"
-        },
-        {
-            "id": "ex07-panel01-body",
-            "type": "container",
-            "name": "Body"
-        },
-        {
-            "id": "ex08-panel01-body",
-            "type": "container",
-            "name": "Body"
-        },
-        {
-            "id": "ex09-panel01-body",
-            "type": "container",
-            "name": "Body"
-        },
-        {
-            "id": "ex10-panel01-body",
-            "type": "container",
-            "name": "Body"
-        },
-        {
-            "id": "ex11-panel01-body",
-            "type": "container",
-            "name": "Body"
-        },
-        {
-            "id": "ex12-panel01-body",
-            "type": "container",
-            "name": "Body"
-        },
-        {
-            "id": "ex13-panel01-body",
-            "type": "container",
-            "name": "Body"
-        },
-        {
-            "id": "ex14-panel01-body",
-            "type": "container",
-            "name": "Body"
-        },
-        {
-            "id": "ex15-panel01-body01",
-            "type": "container",
-            "name": "Body"
-        },
-        {
-            "id": "ex15-panel01-body02",
-            "type": "container",
-            "name": "Body"
-        },
-        {
-            "id": "ex16-panel01-body01",
-            "type": "container",
-            "name": "Body"
-        },
-        {
-            "id": "ex01-panel02-body",
-            "type": "container",
-            "name": "Body"
-        },
-        {
-            "id": "ex02-panel02-body",
-            "type": "container",
-            "name": "Body"
-        },
-        {
-            "id": "ex03-panel02-body",
-            "type": "container",
-            "name": "Body"
-        },
-        {
-            "id": "ex04-panel02-body",
-            "type": "container",
-            "name": "Body"
-        },
-        {
-            "id": "ex05-panel02-body",
-            "type": "container",
-            "name": "Body"
-        },
-        {
-            "id": "ex06-panel02-body",
-            "type": "container",
-            "name": "Body"
-        },
-        {
-            "id": "ex07-panel02-body",
-            "type": "container",
-            "name": "Body"
-        },
-        {
-            "id": "ex08-panel02-body",
-            "type": "container",
-            "name": "Body"
-        },
-        {
-            "id": "ex09-panel02-body",
-            "type": "container",
-            "name": "Body"
-        },
-        {
-            "id": "ex10-panel02-body",
-            "type": "container",
-            "name": "Body"
-        },
-        {
-            "id": "ex11-panel02-body",
-            "type": "container",
-            "name": "Body"
-        },
-        {
-            "id": "ex12-panel02-body",
-            "type": "container",
-            "name": "Body"
-        },
-        {
-            "id": "ex13-panel02-body",
-            "type": "container",
-            "name": "Body"
-        },
-        {
-            "id": "ex14-panel02-body",
-            "type": "container",
-            "name": "Body"
-        },
-        {
-            "id": "ex15-panel02-body01",
-            "type": "container",
-            "name": "Body"
-        },
-        {
-            "id": "ex15-panel02-body02",
-            "type": "container",
-            "name": "Body"
-        },
-        {
-            "id": "ex16-panel02-body01",
-            "type": "container",
-            "name": "Body"
-        },
-        {
-            "id": "ex08-panel03-body",
-            "type": "container",
-            "name": "Body"
-        },
-        {
-            "id": "ex16-panel03-body",
-            "type": "container",
-            "name": "Body"
-        },
-        {
-            "id": "ex01-lead",
-            "type": "text",
-            "name": "Lead"
-        },
-        {
-            "id": "ex03-lead",
-            "type": "text",
-            "name": "Lead"
-        },
-        {
-            "id": "ex04-lead",
-            "type": "text",
-            "name": "Lead"
-        },
-        {
-            "id": "ex05-lead",
-            "type": "text",
-            "name": "Lead"
-        },
-        {
-            "id": "ex06-lead",
-            "type": "text",
-            "name": "Lead"
-        },
-        {
-            "id": "ex07-lead",
-            "type": "text",
-            "name": "Lead"
-        },
-        {
-            "id": "ex08-lead",
-            "type": "text",
-            "name": "Lead"
-        },
-        {
-            "id": "ex09-lead",
-            "type": "text",
-            "name": "Lead"
-        },
-        {
-            "id": "ex10-lead",
-            "type": "text",
-            "name": "Lead"
-        },
-        {
-            "id": "ex11-lead",
-            "type": "text",
-            "name": "Lead"
-        },
-        {
-            "id": "ex12-lead",
-            "type": "text",
-            "name": "Lead"
-        },
-        {
-            "id": "ex13-lead",
-            "type": "text",
-            "name": "Lead"
-        },
-        {
-            "id": "ex14-lead",
-            "type": "text",
-            "name": "Lead"
-        },
-        {
-            "id": "ex15-lead",
-            "type": "text",
-            "name": "Lead"
-        },
-        {
-            "id": "ex16-lead",
-            "type": "text",
-            "name": "Lead"
-        },
-        {
-            "id": "ex01-pre01",
-            "type": "text",
-            "name": "Pre-formatted Text"
-        },
-        {
-            "id": "ex02-pre01",
-            "type": "text",
-            "name": "Pre-formatted Text"
-        },
-        {
-            "id": "ex03-pre01",
-            "type": "text",
-            "name": "Pre-formatted Text"
-        },
-        {
-            "id": "ex04-pre01",
-            "type": "text",
-            "name": "Pre-formatted Text"
-        },
-        {
-            "id": "ex05-pre01",
-            "type": "text",
-            "name": "Pre-formatted Text"
-        },
-        {
-            "id": "ex06-pre01",
-            "type": "text",
-            "name": "Pre-formatted Text"
-        },
-        {
-            "id": "ex07-pre01",
-            "type": "text",
-            "name": "Pre-formatted Text"
-        },
-        {
-            "id": "ex08-pre01",
-            "type": "text",
-            "name": "Pre-formatted Text"
-        },
-        {
-            "id": "ex09-pre01",
-            "type": "text",
-            "name": "Pre-formatted Text"
-        },
-        {
-            "id": "ex10-pre01",
-            "type": "text",
-            "name": "Pre-formatted Text"
-        },
-        {
-            "id": "ex11-pre01",
-            "type": "text",
-            "name": "Pre-formatted Text"
-        },
-        {
-            "id": "ex12-pre01",
-            "type": "text",
-            "name": "Pre-formatted Text"
-        },
-        {
-            "id": "ex13-pre01",
-            "type": "text",
-            "name": "Pre-formatted Text"
-        },
-        {
-            "id": "ex14-pre01",
-            "type": "text",
-            "name": "Pre-formatted Text"
-        },
-        {
-            "id": "ex15-pre01",
-            "type": "text",
-            "name": "Pre-formatted Text"
-        },
-        {
-            "id": "ex16-pre01",
-            "type": "text",
-            "name": "Pre-formatted Text"
-        },
-        {
-            "id": "ex01-pre02",
-            "type": "text",
-            "name": "Pre-formatted Text"
-        },
-        {
-            "id": "ex02-pre02",
-            "type": "text",
-            "name": "Pre-formatted Text"
-        },
-        {
-            "id": "ex03-pre02",
-            "type": "text",
-            "name": "Pre-formatted Text"
-        },
-        {
-            "id": "ex04-pre02",
-            "type": "text",
-            "name": "Pre-formatted Text"
-        },
-        {
-            "id": "ex05-pre02",
-            "type": "text",
-            "name": "Pre-formatted Text"
-        },
-        {
-            "id": "ex06-pre02",
-            "type": "text",
-            "name": "Pre-formatted Text"
-        },
-        {
-            "id": "ex07-pre02",
-            "type": "text",
-            "name": "Pre-formatted Text"
-        },
-        {
-            "id": "ex08-pre02",
-            "type": "text",
-            "name": "Pre-formatted Text"
-        },
-        {
-            "id": "ex09-pre02",
-            "type": "text",
-            "name": "Pre-formatted Text"
-        },
-        {
-            "id": "ex10-pre02",
-            "type": "text",
-            "name": "Pre-formatted Text"
-        },
-        {
-            "id": "ex11-pre02",
-            "type": "text",
-            "name": "Pre-formatted Text"
-        },
-        {
-            "id": "ex12-pre02",
-            "type": "text",
-            "name": "Pre-formatted Text"
-        },
-        {
-            "id": "ex13-pre02",
-            "type": "text",
-            "name": "Pre-formatted Text"
-        },
-        {
-            "id": "ex14-pre02",
-            "type": "text",
-            "name": "Pre-formatted Text"
-        },
-        {
-            "id": "ex15-pre02",
-            "type": "text",
-            "name": "Pre-formatted Text"
-        },
-        {
-            "id": "ex16-pre02",
-            "type": "text",
-            "name": "Pre-formatted Text"
-        },
-        {
-            "id": "ex08-pre03",
-            "type": "text",
-            "name": "Pre-formatted Text"
-        },
-        {
-            "id": "ex15-pre03",
-            "type": "text",
-            "name": "Pre-formatted Text"
-        },
-        {
-            "id": "ex15-pre04",
-            "type": "text",
-            "name": "Pre-formatted Text"
-        },
-        {
-            "id": "ex16-pre03",
-            "type": "text",
-            "name": "Pre-formatted Text"
-        },
-        {
-            "id": "ex16-pre04",
-            "type": "text",
-            "name": "Pre-formatted Text"
-        },
-        {
-            "id": "ex01-container",
-            "name": "Example",
-            "type": "container"
-        },
-        {
-            "id": "ex02-lead",
-            "type": "text",
-            "name": "Example"
-        },
-        {
-            "id": "ex03-image",
-            "name": "Example",
-            "type": "image",
-            "comment": "Choose an example.",
-            "data": {
-                "max-width": 340
-            }
-        },
-        {
-            "id": "ex04-background-image",
-            "name": "Example",
-            "type": "background-image",
-            "comment": "Choose a background image.",
-            "data": {
-                "max-width": 1140
-            }
-        },
-        {
-            "type": "video",
-            "id": "ex05-video",
-            "name": "Example",
-            "data": {
-                "max-width": 340
-            }
-        },
-        {
-            "type": "link",
-            "id": "ex06-link",
-            "name": "Example"
-        },
-        {
-            "type": "image-link",
-            "id": "ex07-image-link",
-            "name": "Example",
-            "data": {
-                "max-width": 340
-            }
-        },
-        {
-            "type": "embed",
-            "id": "ex08-embed",
-            "name": "Example"
-        },
-        {
-            "type": "countdown",
-            "id": "ex09-countdown",
-            "name": "Example"
         },
         {
             "type": "facebook-button",
-            "id": "ex10-facebook-button",
-            "name": "Example"
+            "id": "facebook-button--fblike",
+            "name": "Facebook Like"
         },
         {
             "type": "dynamic",
-            "id": "ex11-dynamic",
-            "name": "Example",
+            "id": "dynamic--fbshare",
+            "name": "Facebook Share Button",
             "data": {
                 "variables": [
                     "facebookurl"
@@ -2020,46 +218,254 @@
             }
         },
         {
-            "type": "facebook-comments",
-            "id": "ex12-facebook-comments",
-            "name": "Example"
+            "id": "image--logo",
+            "name": "Logo",
+            "type": "image",
+            "comment": "Upload your logo.",
+            "data": {
+                "max-width": 245
+            }
         },
         {
-            "type": "twitter-button",
-            "id": "ex13-twitter-button",
-            "name": "Example"
+            "id": "image--intro_bg",
+            "name": "Banner Background Image",
+            "type": "image",
+            "comment": "Choose a background photo for your banner.",
+            "data": {
+                "max-width": 1600,
+                "alternate-sources": [
+                    "img/01.jpg",
+                    "img/02.jpg",
+                    "img/03.jpg",
+                    "img/04.jpg",
+                    "img/05.jpg",
+                    "img/06.jpg",
+                    "img/07.jpg",
+                    "img/08.jpg",
+                    "img/09.jpg",
+                    "img/10.jpg"
+                ]
+            }
         },
         {
-            "type": "google-button",
-            "id": "ex14-google-button",
-            "name": "Example"
+            "type": "embed",
+            "id": "embed--embed_01",
+            "name": "Embed Video/Media"
+        },
+        {
+            "type": "video",
+            "id": "video--description-video",
+            "name": "Description Video/Media"
         },
         {
             "type": "link",
-            "id": "ex15-link",
-            "name": "Example #1",
+            "id": "link--cta_1_link",
+            "name": "Primary Signup Button",
             "data": {
                 "href": "#/optin"
+            }
+        },
+        {
+            "type": "link",
+            "id": "link--cta_2_link",
+            "name": "Secondary Signup Button",
+            "data": {
+                "href": "#/optin"
+            }
+        },
+        {
+            "type": "link",
+            "id": "link--facebook_link",
+            "name": "Facebook Link"
+        },
+        {
+            "type": "link",
+            "id": "link--twitter_link",
+            "name": "Twitter Link"
+        },
+        {
+            "type": "link",
+            "id": "link--google_link",
+            "name": "Google Plus Link"
+        },
+        {
+            "type": "link",
+            "id": "link--linkedin_link",
+            "name": "LinkedIn Link"
+        },
+        {
+            "type": "link",
+            "id": "link--footer_link_1",
+            "name": "#1 Footer Link"
+        },
+        {
+            "type": "link",
+            "id": "link--footer_link_2",
+            "name": "#2 Footer Link"
+        },
+        {
+            "type": "link",
+            "id": "link--footer_link_3",
+            "name": "#3 Footer Link"
+        },
+        {
+            "type": "link",
+            "id": "link--footer_link_4",
+            "name": "#4 Footer Link"
+        },
+        {
+            "type": "countdown",
+            "id": "countdown--launch_countdown",
+            "name": "Registration Countdown"
+        },
+        {
+            "id": "text--intro_title",
+            "name": "Banner First Line",
+            "type": "text"
+        },
+        {
+            "id": "text--intro_subtitle",
+            "name": "Banner Second Line",
+            "type": "text"
+        },
+        {
+            "id": "container--horizontalRule",
+            "name": "Horizontal Line",
+            "type": "container"
+        },
+        {
+            "id": "text--join_us",
+            "name": "Banner Small Text",
+            "type": "text"
+        },
+        {
+            "id": "text--day",
+            "name": "Webinar Date",
+            "type": "text"
+        },
+        {
+            "id": "container--dashes",
+            "name": "Webinar Dashes",
+            "type": "container"
+        },
+        {
+            "id": "text--time",
+            "name": "Webinar Time",
+            "type": "text"
+        },
+        {
+            "id": "text--description_title",
+            "name": "Description Header Title",
+            "type": "text"
+        },
+        {
+            "type": "image-link",
+            "id": "image-link--imgLink_01",
+            "name": "Image Link #1",
+            "data": {
+                "max-width": 200
             }
         },
         {
             "type": "image-link",
-            "id": "ex15-image-link",
-            "name": "Example #2",
+            "id": "image-link--imgLink_02",
+            "name": "Image Link #2",
             "data": {
-                "max-width": 240,
-                "href": "#/optin"
+                "max-width": 200
             }
         },
         {
-            "type": "dynamic",
-            "id": "ex16-dynamic",
-            "name": "Video Background Example",
+            "type": "image-link",
+            "id": "imageLink--imgLink_03",
+            "name": "Image Link #3",
             "data": {
-                "variables": [
-                    "videourl"
-                ]
+                "max-width": 200
             }
+        },
+        {
+            "id": "text--description_subtitle",
+            "name": "Description Subheader Title",
+            "type": "text"
+        },
+        {
+            "id": "text--description_text",
+            "name": "Description Text",
+            "type": "text"
+        },
+        {
+            "id": "text--testimonial_title",
+            "name": "Testimonial Title",
+            "type": "text"
+        },
+        {
+            "id": "text--testimonial_1_text",
+            "name": "#1 Testimonial Text",
+            "type": "text"
+        },
+        {
+            "id": "text--testimonial_1_author",
+            "name": "#1 Testimonial Author",
+            "type": "text"
+        },
+        {
+            "id": "text--testimonial_2_text",
+            "name": "#2 Testimonial Text",
+            "type": "text"
+        },
+        {
+            "id": "text--testimonial_2_author",
+            "name": "#2 Testimonial Author",
+            "type": "text"
+        },
+        {
+            "id": "text--countdown_text",
+            "name": "Countdown Title",
+            "type": "text"
+        },
+        {
+            "id": "text--cta_title",
+            "name": "Call To Action Title",
+            "type": "text"
+        },
+        {
+            "id": "text--cd-days",
+            "name": "Days Text",
+            "type": "text"
+        },
+        {
+            "id": "text--cd-hours",
+            "name": "Hours Text",
+            "type": "text"
+        },
+        {
+            "id": "text--cd-mins",
+            "name": "Mins Text",
+            "type": "text"
+        },
+        {
+            "id": "text--cd-secs",
+            "name": "Secs Text",
+            "type": "text"
+        },
+        {
+            "id": "text--emb_title",
+            "name": "Embed Section Headline",
+            "type": "text"
+        },
+        {
+            "id": "text--imglnk_title",
+            "name": "Image Link / Social Headline",
+            "type": "text"
+        },
+        {
+            "id": "text--fblike_text",
+            "name": "FB Like Text",
+            "type": "text"
+        },
+        {
+            "id": "text--legal_text",
+            "name": "Legal Text",
+            "type": "text"
         }
     ]
 }
