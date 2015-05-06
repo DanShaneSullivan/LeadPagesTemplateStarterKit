@@ -324,6 +324,10 @@
             "name": "LinkedIn Link"
         },
         {
+            "type": "container",
+            "id": "container--footer_links",
+            "name": "Footer Links"
+        },{
             "type": "link",
             "id": "link--footer_link_1",
             "name": "#1 Footer Link"
