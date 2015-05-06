@@ -1,5 +1,5 @@
 {
-    "id": "<%= template_id %>",
+    "id": "<%= template_id%>",
     "name": "<%= template_name %>",
     "mobile": true,
     "notes": "Initial Release 1.0",
@@ -324,6 +324,10 @@
             "name": "LinkedIn Link"
         },
         {
+            "type": "container",
+            "id": "container--footer_links",
+            "name": "Footer Links"
+        },{
             "type": "link",
             "id": "link--footer_link_1",
             "name": "#1 Footer Link"
