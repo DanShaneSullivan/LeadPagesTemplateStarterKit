@@ -284,17 +284,7 @@
         },
         {
             "type": "video",
-            "id": "video--description-video1",
-            "name": "Description Video/Media"
-        },
-          {
-            "type": "video",
-            "id": "video--description-video2",
-            "name": "Description Video/Media"
-        },
-          {
-            "type": "video",
-            "id": "video--description-video3",
+            "id": "video--description-video",
             "name": "Description Video/Media"
         },
         {
