@@ -6,7 +6,6 @@
     "syntax": 4,
     "version": 1.0,
     "style": {
-        "replacements": [
             {
                 "type": "color",
                 "name": "Header Color",
@@ -112,7 +111,6 @@
                 "name": "Footer Text Hover Color",
                 "find": "#a0a0a0"
             }
-        ]
     },
     "form": {
         "title": {
